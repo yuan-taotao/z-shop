@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情</title>
+	<link rel="stylesheet" href="./include/css/spxq.css">
+</head>
+<body>
+	<!-- 顶部 -->
+	<div class="tj">
+		<div class="db W center">
+			<div>
+				<span><a class="dba tsa" href="">商城首页</a></span>
+				<?php
+					$a=isset($_SESSION['user']['islogin'])?"欢迎你,".$_SESSION['user']['username']:"登录";
+					$b=isset($_SESSION['user']['islogin'])?'退出':'免费注册';
+					$c=	isset($_SESSION['user']['islogin'])?'./index.php?m=per&a=show':'./index.php?m=sign&a=show';
+					$d=	isset($_SESSION['user']['islogin'])?'./index.php?m=signout&a=signout':'./index.php?m=reg&a=show';
+					echo '<span>Hi~欢迎来到Z商城，请<a class="dba" href="'.$c.'">'.$a.'</a></span>';
+					echo '<a class="dba" href="'.$d.'">'.$b.'</a>';
+?>
+				<!-- <span>Hi~欢迎来到Z商城，请<a class="dba" href="">登录</a></span>
+				<a class="dba" href="">免费注册</a> -->
+			</div>
+			<ul class="db-1">
+				<li class="db_1"><a href="">我的订单</a></li>
+				<li><div>买家中心∨</div></li>
+				<li class="db_1"><a href="./index.php?m=cart&a=show">购物车0件</a></li>
+				<li class="db_1"><a href="">帮助中心</a></li>
+				<li><div>|</div></li>
+				<li><div>手机商城∨</div></li>
+				<li class="db_1"><a href="">中关村在线</a></li>
+				<li class="db_1"><a href="">招商合作</a></li>
+				<li><div>联系客服∨</div></li>
+			</ul>
+		</div>
+	</div>
+<!--头部广告-->
+	<div class="center tb"></div>
+<!--logo 搜索-->
+	<div class="bag center W">
+		<div class="logo">
+			<a href="http://www.ZOL.com"><img src="./include/images/logo.jpg" ></a>
+		</div>
+		<form action="" class="f2">
+			<input type="text" placeholder="找找你想要的商品">
+			<input type="submit" value="搜索">
+		</form>
+		<div class="quick">
+			<div class="order"><a href="">我的订单</a></div>
+			<div class="coupon"><a href="">我的优惠卷</a></div>
+			<div class="cart"><a href="">购物车</a></div>
+		</div>
+	</div>
+	<!--导航-->
+	<div class="dh center W">
+		<div class="fl">
+			<a href="">全部分类</a>
+			<div class="fl-1">
+				<div class="fl-sj">
+					<h3 class="line">
+						<a class="font" href="">手机</a>
+					</h3>
+					<div class="fl-sj-1 xt">
+						<ul>
+						
+							<li><a href="">手机</a></li>
+							<li><a href="">移动电源</a></li>
+							<li><a href="">蓝牙耳机</a></li>
+							<li><a href="">手机贴膜</a></li>
+							<li><a href="">保护套</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/sj.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-dn xt">
+					<h3 class="line">
+						<a class="font" href="">电脑</a>
+					</h3>
+					<div class="fl-dn-1">
+						<ul>
+							<li><a href="">笔记本电脑</a></li>
+							<li><a href="">游戏本</a></li>
+							<li><a href="">一体机</a></li>
+							<li><a href="">平板电脑</a></li>
+							<li><a href="">超极本</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/dn.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-div xt">
+					<h3 class="line">
+						<a class="font" href="">DIV</a>
+					</h3>
+					<div class="fl-div-1">
+						<ul>
+							<li><a href="">DIV主机</a></li>
+							<li><a href="">团购钜惠</a></li>
+							<li><a href="">硬盘</a></li>
+							<li><a href="">电源</a></li>
+							<li><a href="">显卡</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/div.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-sm xt">
+					<h3 class="line">
+						<a class="font" href="">数码</a>
+					</h3>
+					<div class="fl-sm-1">
+						<ul>
+							<li><a href="">数码相机</a></li>
+							<li><a href="">摄像机</a></li>
+							<li><a href="">相机镜头</a></li>
+							<li><a href="">拍立得</a></li>
+							<li><a href="">相机包</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/sm.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-ws xt">
+					<h3 class="line">
+						<a class="font" href="">外设</a>
+					</h3>
+					<div class="fl-ws-1">
+						<ul>
+							<li><a href="">键盘</a></li>
+							<li><a href="">鼠标</a></li>
+							<li><a href="">鼠标套装</a></li>
+							<li><a href="">鼠标垫</a></li>
+							<li><a href="">路由器</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/ws.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-zn xt">
+					<h3 class="line">
+						<a class="font" href="">智能</a>
+					</h3>
+					<div class="fl-zn-1">
+						<ul>
+							<li><a href="">智能手环</a></li>
+							<li><a href="">智能手表</a></li>
+							<li><a href="">VR眼镜</a></li>
+							<li><a href="">智能灯</a></li>
+							<li><a href="">智能投影</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/zn.jpg" alt=""></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class="hh">
+			<li class="sy"><a href="">首页</a></li>
+			<li class="tg"><a href="">团购</a></li>
+			<li class="dz"><a href="">电子竞技</a></li>
+			<li class="bd"><a href="">本地优选</a></li>
+			<li class="jd"><a href="">家电优选</a></li>
+		</ul>
+	</div>
+	<!-- 商品详情 -->
+	<div class="sp W center">
+		<div class="sn">
+			<a href="">首页</a>>
+			<a href="">数码相机</a>>
+			<span>索尼</span>
+		</div>
+		<div class="xq center">
+			<div class="xq_1">
+				<div class="t">
+					<div class="img_dt">
+						<img width="400" height="400" src="../public/upload/goods/<?=$res[0]['pic']?>"alt="">
+					</div>
+					<div class="img_xt">
+						<a class="frist" href="">
+							<img src="http://i3mercrt.fd.zol-img.com.cn/t_s70x70/g5/M00/02/03/ChMkJlhsdGSIGt7rAAEw3r1CUOYAAZFbACRzksAATD2773.jpg" alt="">
+						</a>
+						<a href="">
+							<img src="http://i1mercrt.fd.zol-img.com.cn/t_s70x70/g5/M00/02/03/ChMkJlhsdHKIJOUSAADl8ypXJlMAAZFbAFK1GMAAOYL677.jpg" alt="">
+						</a>
+						<a href="">
+							<img src="http://i0mercrt.fd.zol-img.com.cn/t_s70x70/g5/M00/02/03/ChMkJlhsdHyIPpYMAADnA3mP-uMAAZFbAGDY0UAAOcb760.jpg" alt="">
+						</a>
+						<a href="">
+							<img src="http://i4mercrt.fd.zol-img.com.cn/t_s70x70/g5/M00/02/03/ChMkJ1hsdIuIQPUEAAGG9HwYoPEAAZFbAH2CVwAAYcM044.jpg" alt="">
+						</a>
+						<a href="">
+							<img src="http://i0mercrt.fd.zol-img.com.cn/t_s70x70/g5/M00/02/03/ChMkJ1hsdJ6IfScpAAC0kCUqg_MAAZFbAM9xtUAALSo176.jpg" alt="">
+						</a>
+					</div>
+				</div>
+				<div class="right">
+					<h3>
+						<?=$res[0]['name']?>
+						<span><?=$res[0]['descr']?></span>
+					</h3>
+
+					<div class="jg"><!--价格-->
+						<dl>
+							<dt>价&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;格：</dt>
+							<dd>￥<?=$res[0]['price']?></dd>
+						</dl>
+					</div>
+					<div class="ps_w">
+						<dl class="ps"><!--配送-->
+							<dt>配&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;送：</dt>
+							<dd>
+								<div class="sc">
+									<div class="sc_1">四川∨</div>
+									<div class="sc_2">可送达，快递包邮</div>
+								</div>
+							</dd>
+						</dl>
+						<dl class="fw"><!--服务保障-->
+							<dt>服务保障：</dt>
+							<dd class="fw-1">由<a href="">华晨数码专营店</a> 发货并承诺提供以下服务保障</dd>
+							<dd class="fw-2">
+								<ul>
+									<li>
+										<i class="i1">正</i><a href="">正品保障</a>
+									</li>
+									<li>
+										<i class="i2">发</i><a href="">发票保障</a>
+									</li>
+									<li>
+										<i class="i3">无</i><a href="">无忧退换</a>
+									</li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="ys"><!--颜色类别-->
+							<dl class="color">
+								<dt>颜色类别：</dt>
+								<dd>
+									<li><span>黑色</span><i></i></li>
+								</dd>
+							</dl>
+							<dl class="tz">
+								<dt>套&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;装：</dt>
+								<dd>
+									<li><span>官方标配</span><i></i></li>
+									<div>按宝贝出厂装箱单为准【顺丰包邮】</div>
+								</dd>
+							</dl>
+							<form action="">
+								<dl class="sl">
+									<dt>购买数量：</dt>
+									<dd>
+										<div class="zj">
+											<span class="span1"></span>
+											<input type="text" value="1">
+											<span class="span2"></span>
+										</div>
+										<span class="span3">件&nbsp;（限购6件）</span>
+									</dd>
+								</dl>
+								<div class="lj">
+									<a class="a1" href="">立即购买</a>
+									<a class="a2" href="./index.php?m=cart&a=add&id=<?=$res[0]['id']?>">加入购物车</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hc"><!--华晨数码专营店-->
+				<div class="hc-1">
+					<h3><a href="">华晨数码专营店</a></h3>
+				</div>
+				<div class="zxkf">
+					<div>在线客服：</div>
+					<li>
+						<a href=""><img class="qq" src="http://wpa.qq.com/pa?p=2:3161787337:52" alt=""></a>
+						<span>和我联系</span>
+					</li>
+					<li>
+						<a href=""><img class="qq" src="http://wpa.qq.com/pa?p=2:3161787337:52" alt=""></a>
+						<span>和我联系</span>
+					</li>
+					<li>
+						<a href=""><img class="qq" src="http://wpa.qq.com/pa?p=2:3161787337:52" alt=""></a>
+						<span>和我联系</span>
+					</li>
+					<li>
+						<a href=""><img class="qq" src="http://wpa.qq.com/pa?p=2:3161787337:52" alt=""></a>
+						<span>和我联系</span>
+					</li>
+					<div class="phone"><!--客服电话-->
+						<span>客服电话：</span>
+						<p>010-57133018</p>
+						<p>010-82539071</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 店铺热卖 -->
+		<div class="dprm">
+			<div>店铺热卖</div>
+			<ul>
+				<li>
+					<a class="spimg" href="">
+						<img src="https://mercrt-fd.zol-img.com.cn/t_s150x150/g5/M00/0E/07/ChMkJlgupFCIAee9AAGO5xV83eUAAX2sQGow1UAAY7_599.jpg" alt="">
+					</a>
+					<a href="">
+						<span>佳能 5D Mark IV套机(24-105mm IS II 二代 防抖镜头)</span>
+					</a>
+					<div>¥23750.00</div>
+				</li>
+				<li>
+					<a class="spimg" href="">
+						<img src="https://mercrt-fd.zol-img.com.cn/t_s150x150/g4/M03/0B/0F/Cg-4zFS4svOIDWhjAAEn3TZbmYUAAS2owGj9mgAASf1307.jpg" alt="">
+					</a>
+					<a href="">
+						<span>Canon佳能 5D Mark III(单机)全画幅单反机身 不含镜</span>
+					</a>
+					<div>¥15800.00</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 商品介绍 -->
+	<div class="spjs center">
+		<ul>
+			<li class="li_1">
+				<a href="">商品详情</a>
+			</li>
+			<li class="li_2">
+				<a href="">参数0</a>
+			</li>
+			<li class="li_2">
+				<a href="">购买评价0</a>
+			</li>
+			<li class="li_2">
+				<a href="">成交记录</a>
+			</li>
+			<li class="li_2">
+				<a href="">购买咨询</a>
+			</li>
+			<li class="li_2">
+				<a href="">服务承诺</a>
+			</li>
+		</ul>
+		<div class="two">
+			<span>官方标配</span>
+			按宝贝出厂装箱单为准【顺丰包邮】
+		</div>
+		<div class="three">
+			<span class="three-1">商品介绍</span>
+			<span class="three-2">Products</span>
+		</div>
+		<div class="four">
+			<img src="http://i2.mercrt.fd.zol-img.com.cn/t_s860x860/g5/M00/02/0F/ChMkJ1lHd4qIJ8FUAAFNeo6uggQAAdHfAAc-IYAAU2S588.jpg" alt="">
+		</div>
+		<div class="five">
+			<img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0D/0C/ChMkJlqrpEWIXpvYAANwyaVHaKMAAmxqAMceFQAA3Dh069.jpg" alt="">
+		</div>
+	</div>
+	<!-- 尾部。。 -->
+	<div class="one_wb">
+		<div>
+			<div class="zhzc">
+				<dl>购物指南</dl>
+				<p><a href="">账号注册</a></p>
+				<p><a href="">购物流程</a></p>
+				<p><a href="">付款方式</a></p>
+			</div>
+			<div class="zhzc">
+				<dl>售后服务</dl>
+				<p><a href="">先行赔付</a></p>
+				<p><a href="">退款退货流程</a></p>
+				<p><a href="">投诉举报</a></p>
+			</div>
+			<div class="scbz">
+				<dl>商城保障</dl>
+				<p><a href="">正品保障</a></p>
+				<p><a href="">物流配送</a></p>
+				<p><a href="">24小时发货</a></p>
+				<p><a href="">发票保障</a></p>
+			</div>
+			<div class="scbz">
+				<dl>商家服务</dl>
+				<p><a href="">商家中心</a></p>
+			</div>
+			<dl class="jop">
+				<dt>400-688-1999</dt>
+				<dd>工作日 9:00 - 18:00</dd>
+			</dl>
+		</div>
+	</div>
+
+		<!-- 尾部 -->
+	<div class="tail">
+		<div class="tail_1 center">
+			<div class="tail_1_1">
+				<a href="">中关村在线</a>|
+				<a href="">Z商城</a>|
+				<a href="">团购</a>|
+				<a href="">产品报价</a>|
+				<a href="">论坛</a>|
+				<a href="">问答</a>
+			</div>
+			<div class="tail_1_2">
+				<a href="">关于Z商城</a>|
+				<a href="">帮助中心</a>|
+				<a href="">联系我们</a>
+			</div>
+			<div class="tail_1_3">
+				<span>
+					©2018 中关村在线 版权所有.
+					<a href="">京ICP证150096号</a>
+					京ICP备14061128号
+					<a href="">网络文化经营许可证京网文[2016]1631-199</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

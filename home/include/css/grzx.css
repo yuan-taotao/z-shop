@@ -1,0 +1,317 @@
+/*样式初始化*/
+*{margin:0px;padding: 0px;font: normal 12px/34px arial;}
+html,body{width:100%;height:100%;max-width:5396px;max-height: 2117px;color: #666;
+margin: 0;padding: 0;background-color: #fff;
+}
+a{text-decoration: none;color:blue;}
+a:hover{color: red;}
+ul{list-style: none;}
+img{border:0px;}
+.W{width: 980px;}
+.center{margin:0 auto;}  /*盒子居中*/
+/*头部*/
+.header{width: 100%;height: 34px;padding:1px 10px 0 10px;border-bottom: 1px solid #e6e6e6;
+background: #fafafa;color: #333;font: normal 12px/34px arial;
+}
+.header1{height: 34px;
+}
+.header1-left{width: 360px;height: 34px;float: left;
+}
+.zgc{width: 60px;display: block;color: #666;margin-right: 10px;float: left;
+}
+.wzdh{width: 97px;float: left;position: relative;
+}
+.wzdh>span{width: 50px;padding:0 22px 0 25px;background: url(https://icon.zol-img.com.cn/cms/public-nav/globalSiteNav-bg.png) no-repeat;
+background-position: -180px -168px;display: block;
+}
+.wzdh>span>i{position: absolute;top: 15px;right: 10px;width: 7px;height: 4px;
+overflow: hidden;background: url(https://icon.zol-img.com.cn/cms/public-nav/globalSiteNav-bg.png) no-repeat;
+background-position: -75px -195px;
+}
+/*网站导航隐藏盒子*/
+.wzdh-1{width: 910px;border:1px solid #666;border-top: 0 none;background-color: white;
+display: none;
+}
+.wzdh-1>ul>li>a{margin-right: 16px;color: #666;font-size: 14px;
+}
+.wzdh:hover>.wzdh-1{display: block;
+}
+
+
+.ltdh{width: 83px;float: left;position: relative;
+}
+.ltdh>span{width: 51px;padding:0 22px 0 10px;display: block;
+}
+.ltdh>span>i{position: absolute;top: 15px;right: 10px;width: 7px;height: 4px;
+overflow: hidden;background: url(https://icon.zol-img.com.cn/cms/public-nav/globalSiteNav-bg.png) no-repeat;
+background-position: -75px -195px;
+}
+/*论坛导航隐藏盒子*/
+.ltdh-1{width: 810px;border:1px solid #666;border-top: 0 none;background-color: white;display: none;
+}
+.ltdh-1>ul>li>a{margin-right: 25px;color: #666;font-size: 14px;
+}
+.ltdh:hover>.ltdh-1{display: block;
+}
+.xtd{color: blue;
+}
+/*手机客户端*/
+.mobile{width: 82px;margin-right: 10px;float: left;
+} 
+.mobile>a{color: #666;
+}
+.mobile>a:hover{color: red;text-decoration: underline solid red;
+}
+/*头部右边*/
+.header-lt{width: 198px;float: right;
+}
+/*账号*/
+.zh{width: 58px;position: relative;float: right;
+}
+.zh>a{width: 38px;padding:0 10px;color: #666;
+}
+.zh>a:hover{color: red;text-decoration: underline solid red;
+}
+.zh>i{position: absolute;top: 15px;right: 10px;width: 7px;height: 4px;
+overflow: hidden;background: url(https://icon.zol-img.com.cn/cms/public-nav/globalSiteNav-bg.png) no-repeat;
+background-position: -75px -195px;
+}
+/*账号盒子隐藏*/
+.zh-1{width: 80px;	border:1px solid #e6e6e6;display: none;position: absolute;z-index: 999;
+}
+.zh-1>a{height: 28px;padding: 0 0 0 10px;line-height: 28px;color: #666;display: block;background-color: white;
+}
+.zh-1>a:hover{background: #e6e6e6;
+}
+.zh:hover>.zh-1{display: block;
+}
+/*关注*/
+.gz{width: 58px;position: relative;float: right;
+}
+.gz>a{width: 38px;padding:0 10px;color: #666;
+}
+.gz>a:hover{color: red;text-decoration: underline solid red;
+}
+.gz>i{position: absolute;top: 15px;right: 10px;width: 7px;height: 4px;
+overflow: hidden;background: url(https://icon.zol-img.com.cn/cms/public-nav/globalSiteNav-bg.png) no-repeat;
+background-position: -75px -195px;
+}
+/*关注盒子隐藏*/
+.gz-1{width: 80px;	border:1px solid #e6e6e6;display: none;position: absolute;z-index: 999;
+}
+.gz-1>a{height: 28px;padding: 0 0 0 10px;line-height: 28px;color: #666;display: block;background-color: white;
+}
+.gz-1>a:hover{background: #e6e6e6;
+}
+.gz:hover>.gz-1{display: block;
+}
+/*我的论坛*/
+.wdlt{width: 82px;position: relative;float: right;
+}
+.wdlt>a{width: 62px;padding:0 10px;color: #666;
+}
+.wdlt>a:hover{color: red;text-decoration: underline solid red;
+}
+.wdlt>i{position: absolute;top: 15px;right: 10px;width: 7px;height: 4px;
+overflow: hidden;background: url(https://icon.zol-img.com.cn/cms/public-nav/globalSiteNav-bg.png) no-repeat;
+background-position: -75px -195px;
+}
+/*我的论坛盒子隐藏*/
+.wdlt-1{width: 80px;	border:1px solid #e6e6e6;display: none;position: absolute;z-index: 999;
+}
+.wdlt-1>a{height: 28px;padding: 0 0 0 10px;line-height: 28px;color: #666;display: block;background-color: white;
+}
+.wdlt-1>a:hover{background: #e6e6e6;
+}
+.wdlt:hover>.wdlt-1{display: block;
+}
+/*欢迎您*/
+.come{width: 310px;margin-right: 8px;float: right;
+}
+.come-1{margin-left: 20px;display: block;float: right;color: #666;
+}
+.come-2{position: relative;float: right;background: url(https://icon.zol-img.com.cn/cms/public-nav/globalSiteNav-bg.png) no-repeat;
+ width: 16px;height: 13px;margin: 11px 0 0 20px;background-position: -75px -175px;
+}
+.come>div{float: right;color: #999;
+}
+.come>div>a{color: #666;
+}
+.come>div>a:hover{color: red;text-decoration: underline solid red;
+}
+/*logo*/
+
+.now-header{width:100%;height: 32px;padding: 14px 0;background: #008ee1;border-bottom: 1px solid #f0f0f0;
+}
+.now-header_1{height: 32px;
+}
+.logo{width: 170px;height: 32px;background: url(https://icon.zol.com.cn/zol_user/logo.png) no-repeat;
+float: left;
+}
+	/*首页*/
+.sy{height: 32px;padding-left: 29px;float: left;
+}
+.index{display: inline-block;width: 32px;height: 32px;margin-right: 5px;padding:0 20px;
+float: left;font-size: 14px;color: #fff;line-height: 34px;font-size: 16px;line-height: 32px;
+}
+.grzy{height: 32px;margin-right: 5px;padding:0 20px;font-size: 16px; color: #fff;
+line-height: 32px;display: inline-block;float: left;
+}
+.message{height: 32px;margin-right: 5px;padding:0 20px;font-size: 16px; color: #fff;
+line-height: 32px;display: inline-block;float: left;
+}
+	/*个人设置*/
+.set{height: 32px;position: relative;float: left;
+}
+.set>span{height:32px;padding:0 15px;color: #fff;font-size: 16px;display: block;
+}
+.set>i{position: absolute;top: 15px;right: 10px;width: 7px;height: 4px;
+overflow: hidden;background: url(https://icon.zol-img.com.cn/cms/public-nav/globalSiteNav-bg.png) no-repeat;
+background-position: -75px -195px;
+}
+/*个人设置盒子隐藏*/
+.set-1{width: 80px;	border:1px solid #fafafa;display: none;position: absolute;left: 0;z-index: 999;
+}
+.set-1>a{height: 32px;line-height: 32px;color: #666;display: block;background-color: white;text-align: center;
+}
+.set-1>a:hover{background: #e6e6e6;
+}
+.set:hover>.set-1{display: block;
+}
+/*表单*/
+.form{width:211px;float: right;
+}
+.form_1{display: block;width: 170px;height: 20px;padding:2px 5px;
+line-height: 20px; background-color: #fff;border: 1px solid #f2f2f2;
+border-top-color: #e6e6e6;border-bottom-color: #fbfbfb;border-right: 0 none;float: left; 
+}
+.form_2{border: 0 none;float: left;width: 30px;height: 26px;padding-bottom: 3px;text-indent: -999em;
+cursor: pointer;background-color: #0079bf;background: url(https://icon.zol-img.com.cn/my/2015/base-icos.png) no-repeat;
+background-position: 7px 5px;
+}
+/*页面头部*/
+.pageHead{height: 179px;
+}
+.pageHead>div{width: 978px;height: 177px;border: 1px solid #ebeced;
+margin-top: 20px;position: relative;
+}
+.userbox{width: 856px;height: 94px;padding:24px 0 0 122px;
+border-bottom: 1px solid #ebeced;background-color: #fafafa;position: relative;
+}
+.userbox>a{position: absolute;top: 15px;left: 20px;width: 88px;height: 88px;
+}
+.userbox>a>span{position: absolute;top: 20px;left: 50%;width: 64px;height: 20px;margin: 0 0 0 -32px;
+line-height: 20px;color: #999;text-align: center;
+}
+.userbox>a>img{display: block;border: 4px solid #ebebeb;-moz-border-radius: 44px;
+border-radius: 44px;
+}
+
+.username{width: 550px;
+}
+.username-1{height: 24px;margin: 0 10px 0 0;font-size: 14px;line-height: 24px;color: #333;
+}
+.username-1:hover{text-decoration: underline solid red;
+}
+.username-2{height: 24px;line-height: 24px;padding-right: 4px;color: #f60;
+}
+.username-2:hover{text-decoration: underline solid #f60;
+}
+.edit{width: 856px;height: 24px;margin-top: 5px;color: red;
+}
+.edit>a{height: 22px;padding: 0 7px 0 21px;border: 1px solid #ebeced;background-color: #fff;
+color: #666;background: url(https://icon.zol-img.com.cn/my/2015/base-icos.png) no-repeat;
+white-space: nowrap;line-height: 22px;background-position: -9px -437px;font-size: 16px;
+}
+.usernumbox{height: 50px;position: absolute;top: 34px;right: 26px;
+}
+.usernumbox>span{height: 50px;min-width:24px;float: left;padding:0 20px;text-align: center;
+	color: #999;font: 12px/1.5 Arial;
+}
+.usernumbox>span>a{font-size: 18px;line-height: 28px;color: #666;
+}
+/*动态*/
+.dt{width: 852px;height: 58px;padding-left:126px;
+}
+.dt>a{height: 54px;padding:2px 20px 3px 20px;margin:0 10px -1px 0;font-size: 16px;text-align: center;
+display: block;float: left;line-height: 54px;color: #333;position: relative;
+}
+.dt>a:hover{border-bottom: 4px solid blue;
+}
+.dt-span{position: absolute;top: 18px;right: 14px;width: 6px;height: 6px;overflow: hidden;
+ font: 0/0 arial;background: url(https://icon.zol-img.com.cn/my/2015/base-icos.png) no-repeat;
+ background-position: -20px -488px;}
+ .data{border-bottom: 4px solid blue;font-weight:bold;
+ }
+ /*页面中部*/
+ .middel{width: 978px;height: 750px;margin-top: 20px;border:1px solid #ebeced;
+background: url(https://icon.zol.com.cn/zol_user/sidebar-bg.jpg) repeat-y;
+ }
+ .middel-left{width: 159px;padding:10px 1px 10px 0;float: left;
+}
+/*页面中部左边上*/
+.middel-left-1{width: 159px;padding-bottom:10px;
+}
+.middel-left-1>span{padding-left: 40px;background: url(https://icon.zol-img.com.cn/my/2015/base-icos.png) no-repeat;
+background-position: 5px -296px;font-size: 14px;font-weight: 700;width: 119px;height: 36px;line-height: 36px;
+}
+.bg{background-color: #e6e6e6;
+}
+.middel-left-1>a{width: 119px;height:36px;padding-left: 40px;font-size: 14px;
+line-height: 36px;display: block;color: #666;
+}
+.middel-left-1>a:hover{background-color: #e6e6e6;
+}
+/*页面中部左边下*/
+.middel-left-2{width: 159px;padding-bottom:10px;
+}
+.middel-left-2>span{padding-left: 40px;background: url(https://icon.zol-img.com.cn/my/2015/base-icos.png) no-repeat;
+background-position: 5px -325px;font-size: 14px;font-weight: 700;width: 119px;height: 36px;line-height: 36px;
+}
+.middel-left-2>a{width: 119px;height:36px;padding-left: 40px;font-size: 14px;
+line-height: 36px;display: block;color: #666;
+}
+.middel-left-2>a:hover{background-color: #e6e6e6;
+}
+/*页面中部右边*/
+.middel-right{width: 738px;padding:0 40px 90px 20px;float: right;
+}
+.middel-right-1{height: 34px;margin-top: 20px;line-height: 34px;border-bottom: 1px solid #ebeced;
+}
+.middel-right-1>h3{float: left;font-size: 16px;font-weight: 400;color: #333;
+}
+.identical{width: 651px;height: 30px;padding:3px 0 3px 87px;position: relative;	
+}
+.identical>span{position: absolute;top: 3px;left: 0;width: 72px;height: 30px;
+line-height: 30px;text-align: right;color: #999;font-size: 14px;
+}
+.identical>div{font-size: 14px;color: #333;height: 30px;line-height: 30px;
+}
+.middel-right-2{width: 651px;height: 40px;padding:15px 0 15px 87px;
+position: relative;
+}
+.middel-right-2>span{position: absolute;top: 20px;left: 0;width: 72px;
+height: 30px;line-height: 30px;text-align: right;color: #999;font-size: 14px;
+}
+.middel-right-2>div{width: 651px;height: 40px;
+}
+.middel-right-2>div>span{height: 40px;min-width:68px;padding:0 10px;text-align: center;
+color: #333;font: 12px;float: left;
+}
+.middel-right-2>div>span>a{font-size: 12px;color: red;line-height: 20px;
+}
+.middel-right-2>div>a{height: 40px;margin-left:5px;display: block;float:left;font-size: 14px;line-height: 40px;
+}
+.middel-right-2>div>a:hover{text-decoration:underline solid red;
+}
+/*尾部*/
+.wb{min-width: 980px;background: #333;clear: both;margin-top: 40px;
+}
+.wb_1{width: 100%;height: 40px;padding:0 10px;background: #333;
+}
+.wb-1{height: 40px;background: #333;color: #ccc;text-align: left;font-size: 12px;font-family: arial;line-height: 40px;
+}
+.wb-1_1{float: right; margin: 0 -7px 0 0;color: #666;font-family: "宋体";font-size: 10px;height: 40px;line-height: 40px;
+}
+.wb-1_1>a{padding: 0 6px 0 7px;color: #ccc;text-decoration: none;font-family: Arial;font-size: 12px;
+}

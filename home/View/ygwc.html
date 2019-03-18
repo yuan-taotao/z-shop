@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="./include/css/gwc.css">
+</head>
+<body>
+<!-- 顶部 -->
+	<div class="db W center">
+		<div>
+			<span><a class="dba tsa" href="./index.php">商城首页</a></span>
+			<?php
+					$a=isset($_SESSION['user']['islogin'])?"欢迎你,".$_SESSION['user']['username']:"登录";
+					$b=isset($_SESSION['user']['islogin'])?'退出':'免费注册';
+					$c=	isset($_SESSION['user']['islogin'])?'./index.php?m=per&a=show':'./index.php?m=sign&a=show';
+					$d=	isset($_SESSION['user']['islogin'])?'./index.php?m=signout&a=signout':'./index.php?m=reg&a=show';
+					echo '<span>Hi~欢迎来到Z商城，请<a class="dba" href="'.$c.'">'.$a.'</a></span>';
+					echo '<a class="dba" href="'.$d.'">'.$b.'</a>';
+?>
+			<!-- <span>Hi~欢迎来到Z商城，请<a class="dba" href="">登录</a></span>
+			<a class="dba" href="">免费注册</a> -->
+		</div>
+		<ul class="db-1">
+			<li class="db_1"><a href="">我的订单</a></li>
+			<li><div>买家中心∨</div></li>
+			<li class="db_1"><a href="">购物车0件</a></li>
+			<li class="db_1"><a href="">帮助中心</a></li>
+			<li><div>|</div></li>
+			<li><div>手机商城∨</div></li>
+			<li class="db_1"><a href="">中关村在线</a></li>
+			<li class="db_1"><a href="">招商合作</a></li>
+			<li><div>联系客服∨</div></li>
+		</ul>
+	</div>
+<!-- logo -->
+	<div class="bag center W">
+		<div class="logo">
+			<a href="http://www.ZOL.com"><img src="./include/images/logo.jpg" ></a>
+		</div>
+        <ul class="flow">
+            <li class="s1">加入购物车</li>
+            <li class="s2">下订单</li>
+            <li class="s3">去付款</li>
+            <li class="s4">确认收货</li>
+            <li class="s5">评价</li>
+        </ul>
+	</div>
+<!-- 购物车商品 -->
+<div style="width:960px;margin:0px auto;">
+	<h2>我的购物车</h2>
+	<table class="order-title order-table" align="center" width="960" style="border:1px solid lightgreen" >
+		<tr>
+			<th class="cell3">商品编号</th>
+			<th class="cell1">商品名称</th>
+			<th class="cell3">商品图片</th>
+			<th class="cell2">商品价格</th>
+			<th class="cell5">购买数量</th>
+			<th class="cell6">小计</th>
+			<th class="cell7">操作</th>
+		</tr>
+<?php
+	$total = 0;
+	if(count($_SESSION['cart'])>0){
+		foreach($_SESSION['cart'] as $v){
+			echo '<tr align="center">';
+				echo '<td>'.$v['id'].'</td>';
+				echo '<td>'.$v['name'].'</td>';
+				echo '<td><img src="../public/upload/goods/'.$v['pic'].'" width="50"></td>';
+				echo '<td>'.$v['price'].'</td>';
+				echo '<td><a href="./index.php?m=cart&a=updateCart&id='.$v['id'].'&num=-1"><button>-</button></a>'.$v['num'].'<a href="./index.php?m=cart&a=updateCart&id='.$v['id'].'&num=1"><button>+</button></a></td>';
+				$xiaoji = $v['num'] * $v['price'];
+				echo '<td>'.$xiaoji.'</td>';
+				$total += $xiaoji;
+				echo '<td><a href="./index.php?m=cart&a=delCart&id='.$v['id'].'"><font color="red">删除</font></a></td>';
+			echo '</tr>';
+		}
+	}else{
+		echo '<script>alert("购物车没有东东,继续购物");location="./index.php"</script>';
+	}
+
+?>
+<?php
+		$_SESSION['total']=$total;
+?>
+		<tr>
+			<td colspan="3" align="right"><a href="./index.php?m=cart&a=delCart">清空购物车</a></td>
+			<td colspan="3">总金额:<?=$total?></td>
+			<td align="center"><a href="./index.php?m=order&a=submit"><font color="red">结算</font></a></td>
+		</tr>
+	</table>
+
+</div>
+<!-- 猜你喜欢 -->
+	<ul class="like W center">
+		<li>猜你喜欢</li>
+	</ul>
+	<div class="like-1 center">
+		<ul></ul>
+	</div>
+<!-- 尾部 -->
+	<div class="wb W center">
+		<p>
+			<a href="">关于商城</a>|
+			<a href="">营销中心</a>|
+			<a href="">服务中心</a>|
+			<a href="">联系我们</a>|
+			<a href="">发展历程</a>|
+			<a href="">媒体报道</a>
+		</p>
+		<p>
+			<span>©2018中关村在线 版权所有. 京ICP备09041801号-182
+				<a href="">京ICP证010391号</a>
+			</span>
+		</p>
+	
+		<div class="W center zh">
+			<a href="">
+				<img src="./include/images/beian.png" alt="">
+				<img src="./include/images/jingcha.png" alt="">
+				<img src="./include/images/cert.png" alt="">
+			</a>
+		</div>
+	</div>
+</body>
+</html>

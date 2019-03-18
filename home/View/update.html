@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>头像修改</title>
+</head>
+<body>
+<form action="./index.php?m=per&a=do_update" method="post" enctype="multipart/form-data">
+	<img width="100" height="100" src="../public/upload/pic/<?=$_GET['pic']?>" alt="">
+	<input type="file" name="pic" value="">
+	<input type="hidden" name="ypic" value="<?=$_GET['pic']?>">
+	<input type="submit" value="提交">
+</form>
+	
+</body>
+</html>

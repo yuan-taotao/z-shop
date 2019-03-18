@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<link rel="stylesheet" href="./include/css/grzx.css">
+</head>
+<body>
+<!-- 头部 -->
+	<div class="header">
+		<div class="header1 W center">
+			<div class='header1-left'>
+				<a class="zgc" href="">中关村在线</a>
+				<!-- 网址导航 -->
+				<div class="wzdh">
+					<span>
+					网站导航
+						<i></i>
+					</span>
+					<div class="wzdh-1">
+						<ul>
+							<li>
+								<a class="xtd">网站功能</a>
+								<a href="">查报价</a>
+								<a href="">商城</a>
+								<a href="">团购</a>
+								<a href="">经销商</a>
+								<a href="">专题</a>
+								<a href="">口碑榜</a>
+								<a href="">行情</a>
+								<a href="">新闻</a>
+								<a href="">模拟攒机</a>
+								<a href="">论坛</a>
+								<a href="">二手</a>
+								<a href="">视频</a>
+								<a href="">图说</a>
+								<a href="">软件下载</a>
+							</li>
+							<li>
+								<a class="xtd">产品</a>
+								<a href="">频道</a>
+								<a href="">手机</a>
+								<a href="">笔记本</a>
+								<a href="">平板电脑</a>
+								<a href="">台式机</a>
+								<a href="">数码相机</a>
+								<a href="">数码配件</a>
+								<a href="">硬件DIY</a>
+								<a href="">外设</a>
+								<a href="">企业</a>
+								<a href="">办公</a>
+								<a href="">家电</a>
+								<a href="">汽车</a>
+								<a href="">更多>></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 论坛导航 -->
+				<div class="ltdh">
+					<span>
+					论坛导航
+						<i></i>
+					</span>
+					<div class="ltdh-1">
+						<ul>
+							<li>
+								<a class="xtd">热门版块</a>
+								<a href="">ZOL论坛</a>
+								<a href="">论坛活动</a>
+								<a href="">手机论坛</a>
+								<a href="">笔记本论坛</a>
+								<a href="">硬件论坛</a>
+								<a href="">平板论坛</a>
+								<a href="">摄影论坛</a>
+							</li>
+							<li>
+								<a class="xtd">兴趣圈子</a>
+								<a href="">Z神通联盟</a>
+								<a href="">有问必答</a>
+								<a href="">试用圈子</a>
+								<a href="">手机摄影</a>
+								<a href="">美女摄影部落</a>
+								<a href="">拆机堂</a>
+								<a href="">折本办</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="mobile"><a href="">手机客户端</a></div>
+			</div>
+		<!-- 我的论坛 -->
+			<div class="header-lt">
+			
+				<div class="zh"><!-- 账号 -->
+					<a href="">账号</a>
+					<i></i>
+					<div class="zh-1">
+						<a href="">修改资料</a>
+						<a href="">更改头像</a>
+						<a href="">修改密码</a>
+					</div>
+				</div>
+				
+				<div class="gz"><!-- 关注 -->
+					<a href="">关注</a>
+					<i></i>
+					<div class="gz-1">
+						<a href="">新动态</a>
+						<a href="">新粉丝</a>
+					</div>
+				</div>
+				
+				<div class="wdlt"><!-- 我的论坛 -->
+					<a href="">我的论坛</a>
+					<i></i>
+					<div class="wdlt-1">
+						<a href="">我的论坛</a>
+						<a href="">我的帖子</a>
+						<a href="">我的收藏</a>
+						<a href="">我的问答</a>
+						<a href="">我的任务</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="come"><!-- 欢迎你 -->
+				<a class="come-1" href="./index.php?m=signout&a=signout">退出</a>
+				<a class="come-2" href=""></a>
+				<div>
+					欢迎您，<a href=""><?=$v['username']?></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--logo-->
+	<div class="now-header center">
+		<div class="now-header_1 W center">
+			<div class="logo"></div>
+			<div class="sy"><!--首页-->
+				<a class="index" href="http://my.zol.com">首页</a>
+				<a class="grzy" href="">个人主页</a>
+				<a class="message" href="">消息</a>
+			</div>
+			<div class="set"><!--个人设置-->
+					<span>个人设置</span>
+					<i></i>
+					<div class="set-1">
+						<a href="">我的论坛</a>
+						<a href="">我的帖子</a>
+					</div>
+			</div>
+			<form class="form" action="" method="">
+				<input class="form_1" type="text" placeholder="搜索商品/店铺">
+				<input class="form_2" type="submit" value="搜索">
+			</form>
+		</div>
+	</div>
+	<!-- 页面头部 -->
+	<div class="pageHead W center">
+		<div>
+			<div class="userbox">
+				<a href="">
+					<span>上传头像</span>
+					<img width="80" height="80" src="../public/upload/pic/<?=$val['pic']?>">
+				</a>
+				<div class="username">
+					<a class="username-1" href=""><?=$v['username']?></a>
+					<a class="username-2" href="">Lv.1</a>
+				</div>
+				<div class="edit">
+					<a href="">编辑个人资料</a>
+				</div>
+				<div></div>
+			</div>
+			<div class="usernumbox">
+				<span>
+					<a href="">0</a>
+					<br>
+					好友
+				</span>
+				<span>
+					<a href="">0</a>
+					<br>
+					粉丝
+				</span>
+				<span>
+					<a href="">0</a>
+					<br>
+					关注
+				</span>
+			</div>
+			<!-- 动态 -->
+			<div class="dt">
+				<a href="">动态</a>
+				<a href="">论坛</a>
+				<a href="">
+					任务
+					<span class="dt-span"></span>
+				</a>
+				<a href="">资讯</a>
+				<a class="data" href="">资料</a>
+				<a href="">Z金豆</a>
+				<a href="">设备</a>
+			</div>
+		</div>
+	</div>
+	<!-- 页面中部 -->
+	<div class="middel center">
+		<div class="middel-left">
+			<div class="middel-left-1">
+				<span>资料</span>
+				<a class="bg" href="">个人资料</a>
+				<a href="./index.php?m=per&a=update&pic=<?=$val['pic']?>">修改头像</a>
+				<a href="">修改密码</a>
+				<a href="">达人属性</a>
+				<a href="">个性签名</a>
+				<a href="">其他</a>
+			</div>
+			<div class="middel-left-2">
+				<span>账号设置</span>
+				<a href="">账号管理</a>
+				<a href="">账号绑定</a>
+				<a href="">隐私管理</a>
+				<a href="">账号申诉</a>
+				<a href="">认证</a>
+			</div>
+		</div>
+		<div class="middel-right">
+			<div class="middel-right-1">
+				<h3>基本信息</h3>
+			</div>
+			<div class="identical">
+				<span>真实名：</span>
+				<div><?=$val['name']?></div>
+			</div>
+			<div class="identical">
+				<span>登录名：</span>
+				<div><?=$v['username']?></div>
+			</div>
+			<div class="identical">
+				<span>权限：</span>
+				<div><font color='red'><?=$qx[$v['state']]?></font></div>
+			</div>
+			<div class="identical">
+				<span>性别：</span>
+				<div><?=$sex[$val['sex']]?></div>
+			</div>
+			<div class="identical">
+				<span>所在地：</span>
+				<div><?=$val['address']?></div>
+			</div>
+			<div class="identical">
+				<span>婚姻状况：</span>
+				<div><?=$hf[$val['hunfou']]?></div>
+			</div>
+			<div class="identical">
+				<span>年龄：</span>
+				<div><?=$val['age']?></div>
+			</div>
+			<div class="identical">
+				<span>注册时间：</span>
+				<div><?=$time?></div>
+			</div>
+			<div class="identical">
+				<span>最后登录：</span>
+				<div>2018-09-30 08:52:13</div>
+			</div>
+			<div class="middel-right-1">
+				<h3>个人成就</h3>
+			</div>
+			<div class="middel-right-2">
+				<span>论坛贡献：</span>
+				<div>
+					<span>
+						<a href="">0</a>
+						<br>
+						帖子
+					</span>
+					<span>
+						<a href="">0</a>
+						<br>
+						精华
+					</span>
+					<span>
+						<a href="">0</a>
+						<br>
+						回复
+					</span>
+				</div>
+			</div>
+			<div class="middel-right-2">
+				<span>问答贡献：</span>
+				<div>
+					<span>
+						<a href="">0</a>
+						<br>
+						提问
+					</span>
+					<span>
+						<a href="">0</a>
+						<br>
+						回答
+					</span>
+					<span>
+						<a href="">0</a>
+						<br>
+						被邀请
+					</span>
+					<span>
+						<a href="">0</a>
+						<br>
+						问答积分
+					</span>
+					<span>
+						<a href="">0</a>
+						<br>
+						以兑换
+					</span>
+					<a href="">如何赚取问答积分？</a>
+				</div>
+			</div>
+			<div class="middel-right-2">
+				<span>Z金豆：</span>
+				<div>
+					<span>
+						<a href="">0</a>
+						<br>
+						Z金豆
+					</span>
+					<span>
+						<a href="">0</a><br>
+						
+						以兑换
+					</span>
+					<a href="">如何赚取金豆？</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部 -->
+	<div class="wb">
+		<div class="wb_1">
+			<div class="wb-1 center W">
+				©2018 中关村在线 版权所有
+				<sapn class="wb-1_1">
+					<a href="">公司简介</a>|
+					<a href="">公司历程</a>|
+					<a href="">营销推广</a>|
+					<a href="">媒体合作</a>|
+					<a href="">品牌大全</a>|
+					<a href="">帐号注册</a>|
+					<a href="">招聘信息</a>|
+					<a href="">联系方式</a>|
+					<a href="">隐私声明</a>|
+					<a href="">站点地图</a>|
+					<a href="">反馈纠错</a>
+				</sapn>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

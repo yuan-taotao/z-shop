@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>订单详情</title>
+	<link rel="stylesheet" href="./include/css/ddxq.css">
+</head>
+<body>
+<!-- 头部 -->
+	<div class="header">
+		<div class="header_1 W center">
+			<div class="header_1_1">
+				<a href="">中关村在线</a>|
+				<a href="">产品报价</a>|
+				<a href="">ZOL商城</a>|
+				<a href="">团购</a>|
+				<a href="">论坛</a>|
+				<a href="">经销商</a>
+			</div>
+			<ul class="header_1_2">
+				<li class="login">
+					你好，
+					<a href="./index.php?m=per&a=show"><?=$name?></a>
+					<a class="login_1" href="./index.php?m=signout&a=signout">退出</a>|
+				</li>
+				<div class="none">
+					<li class="login1"><a href="">买家中心v</a></li>
+					<div class="block">
+						<a href="">已买到的商品</a><a href="">收货地址</a>
+					</div>
+				</div>
+				<li class="login2">
+					|<a href="">购物车
+					(<em>0</em>)
+					</a>|
+				</li>
+				<li class="login3"><a href="">帮助中心</a>|</li>
+				<li class="login4">客服电话：<em>400-688-1999</em></li>
+			</ul>
+		</div>
+	</div>
+	<!-- logo -->
+	<div class="logo W center">
+		<a href="">
+			<img src="http://icon.zol-img.com.cn/zol_shop_logo/shop_212x40.jpg" width="212" height="40" alt="">
+		</a>
+		<a href="">
+			<img src="http://icon.zol-img.com.cn/newshop/shop/logo-text.png" width="165" height="40">
+		</a>
+		<ul class="flow">
+            <li class="s1">加入购物车</li>
+            <li class="s2">下订单</li>
+            <li class="s3">去付款</li>
+            <li class="s4">确认收货</li>
+            <li class="s5">评价</li>
+        </ul>
+	</div>
+	<!-- 订单状态 -->
+	<div class="content center">
+		<dl class="amount">
+			<dt>订单状态：</dt>
+			<dd><strong><?=$arr[$v['status']]?></strong></dd>
+		</dl>
+		<dl class="amount1">
+			<dt>订单编号：</dt>
+			<dd><?=$v['id']?></dd>
+		</dl>
+		<!-- <div class="content_1">
+			<a href="http://order.zol.com/index.php?c=Pay&amp;a=OrderPayList&amp;orderId=2303905&amp;token=ee7ff205a66163458a0d2eb94e897d1f">立即付款</a>
+			<span>余<em>00</em>天<em>00</em>小时<em>00</em>分<em>00</em>秒的时间来完成付款</span>
+		</div> -->
+		<div class="content_2">
+			<p class="p1">
+				<span>商城服务：</span>
+				<a href="">如何退款</a>|
+				<a href="">服务保障</a>
+			</p>
+			<p class="p2">
+				<span>相关操作：</span>
+				<a href="">我买到的商品</a>
+			</p>
+		</div>
+	</div>
+	<!-- 订单详情信息 -->
+	<div class="information W center">
+		<ul>
+			<li class="infor1">顶单详情信息</li>
+			<li class="infor2"><a href="">收货物流信息</a></li>
+		</ul>
+		<div class="information_1">
+			<div class="first">
+				<div class="first_1">店铺信息</div>
+				<div class="first_2">
+					<dl>
+						<dt>商家名称：</dt>
+						<dd>环宇荣合专营店</dd>
+					</dl>
+					<dl>
+						<dt>城市：</dt>
+						<dd>陕西</dd>
+					</dl>
+					<dl>
+						<dt>联系qq：</dt>
+						<dd><a href=""><img src="http://wpa.qq.com/pa?p=2:2899257411:52" alt=""></a></dd>
+					</dl>
+					<div>
+					</div>
+					<dl>
+						<dt>邮件：</dt>
+						<dd>a87256862@163.com</dd>
+					</dl>
+					<dl>
+						<dt>联系电话：</dt>
+						<dd>18292888818</dd>
+					</dl>
+				</div>
+				<div class="first_3">
+					<div class="hd">订单信息</div>
+                    <dl>
+                        <dt>订单编号：</dt>
+                        <dd><?=$v['id']?></dd>
+                        <dt>下单时间：</dt>
+                        <dd><?=$time?></dd>
+                        <dt>付款时间：</dt>
+                        <dd>-</dd>
+                        <dt>支付方式：</dt>
+                        <dd>网上支付</dd>
+                    </dl>  
+				</div>
+				<table class="table" width="918">
+					<tr>
+						<th class="th-1">所选商品</th>
+						<th class="th-2">单价（元）</th>
+						<th class="th-3">数量</th>
+						<th class="th-4">优惠</th>
+						<th class="th-5">小计（元）</th>
+					</tr>
+					<tr class="tr">
+						<td colspan="5"></td>
+					</tr>
+					<tr class="tr1">
+						<td class="td-1">
+							<a class="pic" href="">
+								<img width="60" height="70" src="../public/upload/goods/<?=$v['goodspic']?>" alt="">
+							</a>
+							<div class="pic-1">
+								<h3><a href="">【现货包邮 送壳膜】<?=$v['goodsname']?></a></h3>
+								<div class="pic_1"></div>
+								<p>颜色：珠光白行货32GB(非合约机)</p>
+								<div class="pic_2"><span>套装：官方标配</span></div>
+							</div>
+						</td>
+						<td class="td-2"><?=$v['price']?></td>
+						<td class="td-3"><div><?=$v['num']?></div></td>
+						<td class="td-4"><span>团购</span></td>
+						<td class="td-5"><em><?=$v['price']?></em></td>
+					</tr>
+					<tr>
+						<td colspan="5" class="tdd">
+							<dl>
+								<dt>应付总额（含运费0元）：</dt>
+								<dd><em><?=$v['price']?></em>元</dd>
+							</dl>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部 -->
+	<div class="wb W center">
+		<p>
+			<a href="">关于商城</a>|
+			<a href="">营销中心</a>|
+			<a href="">服务中心</a>|
+			<a href="">联系我们</a>|
+			<a href="">发展历程</a>|
+			<a href="">媒体报道</a>
+		</p>
+		<p>
+			<span>©2018中关村在线 版权所有. 京ICP备09041801号-182
+				<a href="">京ICP证010391号</a>
+			</span>
+		</p>
+	
+		<div class="W center zh">
+			<a href="">
+				<img src="./include/images/beian.png" alt="">
+				<img src="./include/images/jingcha.png" alt="">
+				<img src="./include/images/cert.png" alt="">
+			</a>
+		</div>
+	</div>
+</body>
+</html>
+</body>
+</html>

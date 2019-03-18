@@ -1,0 +1,111 @@
+/*样式初始化*/
+*{margin:0px;padding: 0px;font: 12px/1.5 "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";}
+html,body{width:100%;height:100%;max-width:5464px;max-height: 794px;color: #333;
+margin: 0;padding: 0;background-color: #f7f7f7;
+}
+a{text-decoration: none;color:#000;}
+a:hover{color: red;}
+ul{list-style: none;}
+img{border:0px;}
+.W{width: 960px;}
+.center{margin:0 auto;}  /*盒子居中*/
+/*顶部*/
+.db{height: 29px;background-color:#f5f5f5;border-bottom: 1px solid #e6e6e6;
+}
+.db>div{float: left;}
+.db>div>span{display: inline-block;padding-right: 20px;color: #666;
+line-height: 20px;    font: 12px/29px arial;}
+.db>div>a{display: inline-block;height: 29px;line-height: 29px;}
+.dba{color: #36c;}
+.tsa{color: #666;}
+.dba:hover{text-decoration: underline solid red;}
+
+.db-1{width: 660px;height: 29px;margin-right: -10px;
+float: right;}
+.db-1>li{float: left;margin: 0 10px;}
+.db-1>li>a{color:#666 }
+.db-1>li>div{line-height: 29px;color:#666 }
+.db_1{height: 29px;line-height: 29px;}
+.db_1>a:hover{color: red;text-decoration: underline red solid;}
+/*logo*/
+.bag{height: 60px;padding:30px 0;}
+.logo{width:130px;height: 60px;float: left;}
+.logo>a>img{height:100%;width:100%;}
+
+.flow{width: 520px;height: 36px;padding-top: 2px;float: right;}
+.s2,.s3,.s4,.s5{background: url(http://icon.zol-img.com.cn/newshop/order/step-bg.png) no-repeat;
+float: left;width: 90px; padding: 0 14px 0 0; background-position: 100% -74px;background-color: #e6e6e6;
+font: 14px/36px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";text-align: center;
+}
+.s1{color: #fff;background: url(http://icon.zol-img.com.cn/newshop/order/step-bg.png) no-repeat #e02d2d;
+float: left;width: 90px; padding: 0 14px 0 0;background-position: 100% -74px;background-color: #e02d2d;
+font: 14px/36px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";text-align: center;}
+.s5{padding：0;}
+/*购物车*/
+.gwc{height: 202px;}
+.gwc>dl{height: 145px;padding: 45px 0 12px 169px;
+background: url(http://icon.zol-img.com.cn/zol_shop/order/images_20120628/shopcar.png) no-repeat 60px 45px;}
+.gwc>dl>dt{height: 40px;font-size: 14px;font-weight: bold;color: #666;
+    line-height: 40px;}
+.gwc>dl>dd{height: 24px;line-height: 24px;}
+.gwc>dl>dd>a{color: #134ba0;text-decoration: none;cursor: pointer;margin: 0 7px;
+}
+.gwc>dl>dd>a:hover{text-decoration:underline red solid;color:red;}
+/*猜你喜欢*/
+.like{height: 34px;border-bottom: 1px solid #e3e3e3;}
+.like>li{width: 129px;height: 33px;border: 1px solid #e3e3e3;border-top: 2px red solid;
+border-bottom: 0 none;margin: 0 5px -1px 0;   font: 16px/33px "Microsoft YaHei";
+text-align: center;}
+
+.like-1{width: 958px;height: 33px;border: 1px solid #e0e0e0; border-top: 0 none;}
+.like-1>ul{width: 944px;padding:20px 0 13px 14px;}
+/*尾部*/
+.wb{margin-top: 40px;padding:5px 0 20px 0;border-top: 1px solid #e3e3e3;}
+.wb>p{width: 960px;padding:14px 0 6px 0;text-align: center;}
+.wb>p>a{display: inline-block;margin: 0 10px;color: #134ba0;
+}
+.wb>p>a:hover{color: red;text-decoration: underline red solid;}
+.wb>p>span{display: inline-block;padding-left: 28px;height: 23px;
+line-height: 23px;}
+.wb>p>span>a{color: #134ba0;}
+.wb>p>span>a:hover{color: red;text-decoration: underline red solid;}
+ 
+.zh>a{display:block;margin-left:330px;}
+
+
+
+.cell1{
+	width:150px;
+	padding-left: 20px;
+	text-align: left;
+}
+.cell2{
+	width: 108px;
+}
+.cell3{
+	width: 50px;
+}
+.cell4{
+	width: 106px;
+}
+.cell5{
+	width: 124px;
+}
+.cell6{
+	width: 116px;
+}
+.cell7{
+	width: 107px;
+}
+.order-table{
+	width: 903px;
+	
+	font-size: 12px;
+    color: #333;
+}
+.order-title td {
+    background: #f5f5f5;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}

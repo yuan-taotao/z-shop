@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Z商城</title>
+	<link rel="stylesheet" href="./include/css/index.css">
+</head>
+<body>
+<!-- 顶部 -->
+	<div class="db W center">
+		<div>
+			<span><a class="dba tsa" href="">商城首页</a></span>
+			<?php
+					$a=isset($_SESSION['user']['islogin'])?"欢迎你,".$_SESSION['user']['username']:"登录";
+					$b=isset($_SESSION['user']['islogin'])?'退出':'免费注册';
+					$c=	isset($_SESSION['user']['islogin'])?'./index.php?m=per&a=show':'./index.php?m=sign&a=show';
+					$d=	isset($_SESSION['user']['islogin'])?'./index.php?m=signout&a=signout':'./index.php?m=reg&a=show';
+					echo '<span>Hi~欢迎来到Z商城，请<a class="dba" href="'.$c.'">'.$a.'</a></span>';
+					echo '<a class="dba" href="'.$d.'">'.$b.'</a>';
+?>
+			<!-- <span>Hi~欢迎来到Z商城，请<a class="dba" href="">登录</a></span>
+			<a class="dba" href="./index.php?m=reg&a=show">免费注册</a> -->
+		</div>
+		<ul class="db-1">
+			<li class="db_1"><a href="">我的订单</a></li>
+			<li><div>买家中心∨</div></li>
+			<li class="db_1"><a href="">购物车0件</a></li>
+			<li class="db_1"><a href="">帮助中心</a></li>
+			<li><div>|</div></li>
+			<li><div>手机商城∨</div></li>
+			<li class="db_1"><a href="">中关村在线</a></li>
+			<li class="db_1"><a href="">招商合作</a></li>
+			<li><div>联系客服∨</div></li>
+		</ul>
+	</div>
+<!--头部广告-->
+	<div class="center tb"></div>
+<!--logo 搜索-->
+	<div class="bag center W">
+		<div class="logo">
+			<a href="http://www.ZOL.com"><img src="./include/images/logo.jpg" ></a>
+		</div>
+		
+		<form action="" class="f1">
+			<select name="成都" id="">
+				<option value="">北京</option>
+				<option value="">上海</option>
+				<option value="">广州</option>
+				<option value="">石家庄</option>
+				<option value="">南京</option>
+				<option value="">杭州</option>
+				<option value="">贵阳</option>
+			</select>
+		</form>
+		<form action="" class="f2">
+			<input type="text" placeholder="找找你想要的商品">
+			<input type="submit" value="搜索">
+		</form>
+		<div class="quick">
+			<div class="order"><a href="./index.php?m=order&a=order">我的订单</a></div>
+			<div class="coupon"><a href="">我的优惠卷</a></div>
+			<div class="cart"><a href="./index.php?m=cart&a=show">购物车</a></div>
+		</div>
+	</div>
+<!--导航-->
+	<div class="dh center W">
+		<div class="fl">
+			<a href="">全部分类</a>
+			<div class="fl-1">
+<?php
+	foreach($types as $k=>$v){
+	
+		if($v['pid']==0){
+			echo '<div class="fl-sj">';
+				echo '<h3 class="line">';
+					echo '<a class="font" href="./index.php?id='.$v['id'].'">'.$v['name'].'</a>';
+				echo '</h3>';
+				echo '<div class="fl-sj-1">';
+					echo '<ul>';
+					foreach($types as $key => $val){
+
+						if($val['pid']==$v['id']){
+						echo' <li><a href="./index.php?id='.$val['id'].'">'.$val['name'].'</a></li>';
+						}
+					}
+					echo '</ul>';
+					echo '<div><a href=""><img src="./include/images/sj.jpg" alt=""></a></div>';
+				echo '</div>';
+			echo '</div>';
+		}
+	}
+
+
+
+?>
+	
+				<!-- <div class="fl-sj">
+					<h3 class="line">
+						<a class="font" href="">手机</a>
+					</h3>
+					<div class="fl-sj-1">
+						<ul>
+						
+							<li><a href="">手机</a></li>
+							<li><a href="">移动电源</a></li>
+							<li><a href="">蓝牙耳机</a></li>
+							<li><a href="">手机贴膜</a></li>
+							<li><a href="">保护套</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/sj.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-dn">
+					<h3 class="line">
+						<a class="font" href="">电脑</a>
+					</h3>
+					<div class="fl-dn-1">
+						<ul>
+							<li><a href="">笔记本电脑</a></li>
+							<li><a href="">游戏本</a></li>
+							<li><a href="">一体机</a></li>
+							<li><a href="">平板电脑</a></li>
+							<li><a href="">超极本</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/dn.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-div">
+					<h3 class="line">
+						<a class="font" href="">DIV</a>
+					</h3>
+					<div class="fl-div-1">
+						<ul>
+							<li><a href="">DIV主机</a></li>
+							<li><a href="">团购钜惠</a></li>
+							<li><a href="">硬盘</a></li>
+							<li><a href="">电源</a></li>
+							<li><a href="">显卡</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/div.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-sm">
+					<h3 class="line">
+						<a class="font" href="">数码</a>
+					</h3>
+					<div class="fl-sm-1">
+						<ul>
+							<li><a href="">数码相机</a></li>
+							<li><a href="">摄像机</a></li>
+							<li><a href="">相机镜头</a></li>
+							<li><a href="">拍立得</a></li>
+							<li><a href="">相机包</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/sm.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-ws">
+					<h3 class="line">
+						<a class="font" href="">外设</a>
+					</h3>
+					<div class="fl-ws-1">
+						<ul>
+							<li><a href="">键盘</a></li>
+							<li><a href="">鼠标</a></li>
+							<li><a href="">鼠标套装</a></li>
+							<li><a href="">鼠标垫</a></li>
+							<li><a href="">路由器</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/ws.jpg" alt=""></a></div>
+					</div>
+				</div>
+				<div class="fl-zn">
+					<h3 class="line">
+						<a class="font" href="">智能</a>
+					</h3>
+					<div class="fl-zn-1">
+						<ul>
+							<li><a href="">智能手环</a></li>
+							<li><a href="">智能手表</a></li>
+							<li><a href="">VR眼镜</a></li>
+							<li><a href="">智能灯</a></li>
+							<li><a href="">智能投影</a></li>
+						</ul>
+						<div><a href=""><img src="./include/images/zn.jpg" alt=""></a></div>
+					</div> -->
+				<!-- </div> -->
+			</div>
+		</div>
+		<ul class="hh">
+			<li class="sy"><a href="./index.php">首页</a></li>
+			<li class="tg"><a href="">团购</a></li>
+			<li class="dz"><a href="">电子竞技</a></li>
+			<li class="bd"><a href="">本地优选</a></li>
+			<li class="jd"><a href="./index.php?m=goods&a=select">家电优选</a></li>
+		</ul>
+	</div>
+<!--切换图-->
+	<div class="qht center">
+		<a href="">
+			<img width="100%" height="400" src="./include/images/dtd.jpg" alt="">
+		</a>
+	</div>
+<!--轻松省-->
+	 <div class="tg1 center">
+	 	<div class="tg1-1"><img src="./include/images/tuangou.png" alt=""></div>
+	  	<div class="tg1-2">
+	  		<div class='tg1-2-1'>
+	  			<p class="sm">
+	  				<a href="">华为 Mate10Pro 64GB</a>
+	  			</p>
+	  			<p class="jg">￥3999</p>
+  			</div>
+	  		<div class='tg1-2-1'>
+	  			<p class="sm">
+	  				<a href="">华为 Mate10Pro 64GB</a>
+	  			</p>
+	  			<p class="jg">￥3999</p>
+	  		</div>
+	  		<div class='tg1-2-1'>
+	  			<p class="sm">
+	  				<a href="">华为 Mate10Pro 64GB</a>
+	  			</p>
+	  			<p class="jg">￥3999</p>
+	  		</div>
+	  		<div class="tg1-2-3"> </div>
+	  		<div class='tg1-2-2'>
+	  			<p class="sm">
+	  				<a href="">华为 Mate10Pro 64GB</a>
+	  			</p>
+	  			<p class="jg">￥3999</p>
+	  		</div>
+	  		<div class='tg1-2-2'>
+	  			<p class="sm">
+	  				<a href="">华为 Mate10Pro 64GB</a>
+	  			</p>
+	  			<p class="jg">￥3999</p>
+	  		</div>
+	  		<div class='tg1-2-2'>
+	  			<p class="sm">
+	  				<a href="">华为 Mate10Pro 64GB</a>
+	  			</p>
+	  			<p class="jg">￥3999</p>
+	  		</div>
+	  	</div>
+	  	<div class="tg1-3">
+	  		<div>
+	  			<div class="tg1-3-t1"></div>
+	  			<ul>
+	  				<li class="l-1"><a href="">oppo R11(标准版/全网通)</a></li>
+	  				<li class="jg-1">￥--</li>
+	  				<span class="span">仅限到店</span>
+	  				<li class="dd"><a href="">到店团</a></li>
+	  			</ul>
+	  		</div>
+	  		<div>
+	  			<div class="tg1-3-t2"></div>
+	  			<ul>
+	  				<li class="l-2"><a href="">oppo R11(标准版/全网通)</a></li>
+	  				<li class="jg-2">￥--</li>
+	  				<span class="span">全国联保</span>
+	  				<li class="dd"><a href="">到店团</a></li>
+	  			</ul>
+	  		</div>
+	  		<div>
+	  			<div class="tg1-3-t3"></div>
+	  			<ul>
+	  				<li class="l-3"><a href="">oppo R11(标准版/全网通)</a></li>
+	  				<li class="jg-3">￥--</li>
+	  				<span class="span">全面屏</span>
+	  				<li class="dd"><a href="">到店团</a></li>
+	  			</ul>
+	  		</div>
+	  	</div> 
+	</div> 
+	<!--领卷中心-->
+	<div class="ljzx center W">
+	<!-- 去看看 -->
+		<div class="kk">
+			<h4>领卷中心</h4>
+			<P>COUPON</P>
+			<div><a href="">去看看>></a></div>
+		</div>
+		<!-- 华开电脑 -->
+		<div class="gtd">
+			<div class="gtd-1">
+				<div class="yhjg">￥10</div>
+				<div class="mz">
+					<h5>华开电脑专营</h5>
+					<p>满2999可用</p>
+				</div>
+			</div>
+			<div class="tt"><a href="">立即领取>></a></div>
+		</div>
+		<!-- 圣彬通讯 -->
+		<div class="gtd">
+			<div class="gtd-1">
+				<div class="yhjg">￥10</div>
+				<div class="mz">
+					<h5>圣彬通讯</h5>
+					<p>满4499可用</p>
+				</div>
+			</div>
+			<div class="tt"><a href="">立即领取>></a></div>
+		</div>
+		<!-- 汇通数码 -->
+		<div class="gtd">
+			<div class="gtd-1">
+				<div class="yhjg">￥3</div>
+				<div class="mz">
+					<h5>汇通数码</h5>
+					<p>满999可用</p>
+				</div>
+			</div>
+			<div class="tt"><a href="">立即领取>></a></div>
+		</div>
+		<!-- 环宇容合 -->
+		<div class="gtd">
+			<div class="gtd-1">
+				<div class="yhjg">￥10</div>
+				<div class="mz">
+					<h5>环宇荣合</h5>
+					<p>满3999可用</p>
+				</div>
+			</div>
+			<div class="tt"><a href="">立即领取>></a></div>
+		</div>
+	</div>
+<!-- 同城购 -->
+<div class="tcg center 	W">
+	<div class="tcg-1">
+		<h3>同城购</h3>
+		<span>同城、身边、退换无忧</span>
+		<a href="">更多></a>
+	</div>
+	<a href="">
+		<div class="tcg-tu"></div>
+	</a>
+	<!-- 下行图 -->
+	<a href="">
+		<div class="tcg-tu-1"></div>
+	</a>
+	<a href="">
+		<div class="tcg-tu-2"></div>
+	</a>
+	<a href="">
+		<div class="tcg-tu-3"></div>
+	</a>
+	<div class="tcg-tu-4"></div>
+	<!-- 商品 -->
+	<div class='tcg-2'>
+		<img src="http://i2.mercrt.fd.zol-img.com.cn/g5/M00/0E/0A/ChMkJ1nLenGIJ-mOAAApaqjQGpgAAg1mAMiyWwAACmC242.jpg" alt="能力风暴 积木机器人氪6号能力风暴 教育机器人 积木系列" width="200" height="200">
+		<p class="p1">
+			<a href="">能力风暴 积木机器人氪6号能力风暴 教育机器人 积木系列</a>
+		</p>
+		<div class="d1">
+			<p class="p2">¥2208.00</p>
+			<p class="p3"><span>电商参考价:</span>¥暂无</p>
+		</div>
+		<div class="d2">
+			<a href="">商品评价</a>
+			<a href="">商品视频</a>
+			<a href="">网友点评</a>
+		</div>
+	</div>
+	<div class='tcg-3'>
+		<img src="http://i4.mercrt.fd.zol-img.com.cn/g5/M00/0E/0A/ChMkJ1nLepyIPp1jAAAWj4EWR4gAAg1mAP9S7oAABan614.jpg" alt="倍轻松isee16眼部按摩器护眼仪眼保仪眼睛按摩器眼部按摩仪" width="200" height="200">
+		<p class="p1">
+			<a href="">倍轻松isee16眼部按摩器护眼仪眼保仪眼睛按摩器眼部按摩仪</a>
+		</p>
+		<div class="d1">
+			<p class="p2">¥338.00</p>
+			<p class="p3"><span>电商参考价:</span>¥429.00</p>
+		</div>
+		<div class="d2">
+			<a href="">商品评价</a>
+			<a href="">商品视频</a>
+			<a href="">网友点评</a>
+		</div>
+	</div>
+	<div class='tcg-4'>
+	<img src="http://i5.mercrt.fd.zol-img.com.cn/g5/M00/0E/0A/ChMkJlnLesWIEvj9AAASOU8u8fsAAg1mQEASRwAABJR615.jpg" alt="Remax  RT-L02化妆镜子充电台式灯" width="200" height="200">
+		<p class="p1">
+			<a href="">Remax  RT-L02化妆镜子充电台式灯</a>
+		</p>
+		<div class="d1">
+			<p class="p2">¥138.00</p>
+			<p class="p3"><span>电商参考价:</span>¥暂无</p>
+		</div>
+		<div class="d2">
+			<a href="">商品评价</a>
+			<a href="">商品视频</a>
+			<a href="">网友点评</a>
+		</div>
+	</div>
+	<div class='tcg-5'>
+		<img src="http://i2.mercrt.fd.zol-img.com.cn/g5/M00/03/08/ChMkJ1nciIWIeh-KAAAzCv4NJbIAAhJFwBBp-IAADMi698.jpg" alt="乐心智能手环mambo2 计步防水睡眠检测心率手表" width="200" height="200">
+		<p class="p1">
+			<a href="">乐心智能手环mambo2 计步防水睡眠检测心率手表</a>
+		</p>
+		<div class="d1">
+			<p class="p2">¥129.00</p>
+			<p class="p3"><span>电商参考价:</span>129.00</p>
+		</div>
+		<div class="d2">
+			<a href="">商品评价</a>
+			<a href="">商品视频</a>
+			<a href="">网友点评</a>
+		</div>
+	</div>
+	<div class='tcg-6'>
+		<img src="http://i1.mercrt.fd.zol-img.com.cn/g5/M00/03/08/ChMkJlnciMmIBhAiAAAuyfZWHCUAAhJFwFYR9QAAC7h877.jpg" alt="新品【现货】 荣耀 V9 Play 标准版/全网通 3GB+32GB" width="200" height="200">
+		<p class="p1">
+			<a href="">新品【现货】 荣耀 V9 Play 标准版/全网通 3GB+32GB</a>
+		</p>
+		<div class="d1">
+			<p class="p2">¥1099.00</p>
+			<p class="p3"><span>电商参考价:</span>¥999.00</p>
+		</div>
+		<div class="d2">
+			<a href="">商品评价</a>
+			<a href="">商品视频</a>
+			<a href="">网友点评</a>
+		</div>
+	</div>
+</div>
+<!-- 智选 -->
+<div class="zx center W">
+	<div class="zx-1">
+		<h3>Z智选</h3>
+	</div>
+	<div class="zx-2 W center">
+		<ul>
+			<li>影音</li>
+			<li>穿戴</li>
+			<li>家居</li>
+			<li>出行</li>
+			<li>美护</li>
+		</ul>
+		<a href="">
+			<img src="./include/images/zx-1.jpg" alt="">
+			<img  width='214px' height="235px" src="./include/images/zx-2.jpg" alt="">
+			<img  width='214px' height="235px" src="./include/images/zx-3.jpg" alt="">
+			<div></div>
+			<img width='182px' height="182px" src="https://mercrt-fd.zol-img.com.cn/g5/M00/03/01/ChMkJlq7TkSIKpkcAAB9FxDw4_gAAnG5ALQ0csAAH0v344.jpg" alt="">
+			<img class="zx-gt" width='182px' height="182px" src="https://mercrt-fd.zol-img.com.cn/g5/M00/03/0B/ChMkJ1pext-IXANbAAA-ZpxfLoEAAkJbwPPJewAAD5-476.jpg" alt="">
+			<img class="zx-gt" width='182px' height="182px" src="https://mercrt-fd.zol-img.com.cn/g5/M00/03/0B/ChMkJlpex0yIDDkeAAA1H23a3ScAAkJcAB1c8AAADU3882.jpg" alt="">
+			<img class="zx-gt" width='182px' height="182px" src="https://mercrt-fd.zol-img.com.cn/g5/M00/03/0B/ChMkJlpeyMiIFkoOAAA5znsauvMAAkJcwB49NEAADnm254.jpg" alt="">
+			<img width="428" height="182" src="https://mercrt-fd.zol-img.com.cn/g5/M00/0D/08/ChMkJlpMbm6IZHlHAAA-eyaTPzcAAjw6gKgwTsAAD6T122.jpg" alt="">
+			<img width="1160" height="120" src="https://mercrt-fd.zol-img.com.cn/g5/M00/0D/09/ChMkJlpMcmuISSRyAAA6hl-tVg4AAjw7wOcUTIAADqe965.jpg" alt="">
+			<img width="1160" height="120" src="https://mercrt-fd.zol-img.com.cn/g5/M00/0A/03/ChMkJloebb-IBPfZAAA3LrKFCeEAAijrQDuZUoAADdG611.jpg" alt="">
+		</a>
+	</div>
+<!-- 品牌精选 -->
+	<div class="pzjx W center">
+		<div class="pzjx-1">
+			<h3>品质精选</h3>
+			<span>大牌、保障、服务赞</span>
+		</div>
+		<ul>
+			<li class="pzjx-1-1">
+				<a href="">
+					<img width="230" height="340" src="https://mercrt-fd.zol-img.com.cn/g5/M00/09/09/ChMkJ1s_IL6IAAn1AABfITG9iuYAApg0AGcn3kAAF85555.jpg" alt="">
+				</a>
+			</li>
+			<li class="pzjx-1-2 yy">
+				<img  width="200" height="200" src="https://mercrt-fd.zol-img.com.cn/g5/M00/01/0F/ChMkJlsiF-KICAtpAAEVj7cfWEcAApCPANnA4QAARWn470.jpg" alt="">
+				<p class="yy-1"><a href="">王俊凯 戴尔DELL游匣G3</a></p>
+				<p class="yy-2">RMB 7,499</p>
+			</li>
+			<li class="pzjx-1-3 yy">
+				<img width="200" height="200" src="https://mercrt-fd.zol-img.com.cn/g5/M00/01/0F/ChMkJlsiHdGICadAAAECBNUPQlcAApCRQK_ihYAAQIc632.jpg" alt="">
+				<p class="yy-1"><a href="">王俊凯戴尔DELL游匣G7</a></p>
+				<p class="yy-2">RMB 9,999</p>
+			</li>
+			<li class="pzjx-1-4 yy">
+				<img width="200" height="200" src="https://mercrt-fd.zol-img.com.cn/g5/M00/01/0F/ChMkJlsiF-KICAtpAAEVj7cfWEcAApCPANnA4QAARWn470.jpg" alt="">
+				<p class="yy-1"><a href="">王俊凯戴尔 游匣G3</a></p>
+				<p class="yy-2">RMB 9,999</p>
+			</li>
+			<li class="pzjx-1-5 yy">
+				<img width="200" height="200" src="https://mercrt-fd.zol-img.com.cn/g5/M00/01/0F/ChMkJlsiHdGICadAAAECBNUPQlcAApCRQK_ihYAAQIc632.jpg" alt="">
+				<p class="yy-1"><a href="">王俊凯 戴尔游匣 G7</a></p>
+				<p class="yy-2">RMB 11,999</p>
+			</li>
+		</ul>
+		</div>
+ 	</div>
+ 	<div class="dzjjs"></div>
+ <!-- 电子竞技 -->
+ 	<div class="dzjj W center">
+		<div class="dzjj-1">
+			<h3>电子竞技</h3>
+		</div>
+		<div class="abc">
+		<div class="dzjj-2">
+		<!-- 热门 -->
+			<div class="rm">
+				<h5>热门</h5>
+				<ul>
+					<li>电竞主机</li>
+					<li class="tbd">电竞外设</li>
+					<li>游戏本</li>
+				</ul>
+			</div>
+			<!-- 图片 -->
+			<a href=""><img width="594" height="260" src="https://mercrt-fd.zol-img.com.cn/g5/M00/04/00/ChMkJ1mtHtuIGz9uAABcBS3GIGYAAgLJAJdiwcAAFwd350.jpg" alt="">
+			</a>
+			<!--  -->
+			<ul class="rm-1">
+				<li class="rm-1-1">
+					<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0D/09/ChMkJ1pMh2OIZ5JCAAB8tjFIb7sAAjxDwOr16QAAHzO678.jpg" width="160" height="160"" alt=""></a>
+					<a href="">鑫谷散热风扇</a>
+					<p>￥69.00</p>
+				</li>
+				<li class="rm-1-2">
+					<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0E/05/ChMkJ1sV-jaIItMqAAAPCY_4W5AAAoz5QDY_NkAAA8h794.jpg" width="160" height="160" alt=""></a>
+					<a href="">大号鼠标垫限时抢</a>
+					<p>￥29.00</p>
+				</li>
+				<li class="rm-1-3">
+					<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0E/05/ChMkJlsV-uOIY2TvAAAf68B59GAAAoz5gMiA6MAACAD031.jpg" width="160" height="160" alt=""></a>
+					<a href="">AOC 23.8英寸IPS窄边HDMI高清显示器</a>
+					<p>￥759.00</p>
+				</li>
+			</ul>
+		</div>
+		<div class="djd">
+		<!-- 热门 -->
+			<div class="djd-1">
+				<h5>电竞DIY</h5>
+			</div>
+			<li>
+				<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/01/0A/ChMkJ1rpZ-iIACX5AAAwLoM2X8gAAoBFAFyxO4AADBG618.jpg" width="160" height="160"" alt=""></a>
+				<a href="">海盗船游戏鼠标</a>
+				<p>¥199.00</p>
+			</li>
+			<li>
+				<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0C/06/ChMkJ1rUcHWIDz8hAAB2IG5ZuhgAAnsPANvW8cAAHY4711.jpg" width="160" height="160"" alt=""></a>
+				<a href="">Apple iMac限时直降</a>
+				<p>¥10299.00</p>
+			</li>
+			<li>
+				<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0B/09/ChMkJllTW12IYzm-AAHIYBNt59QAAdp2wPMDg8AAch4067.jpg" width="160" height="160"" alt=""></a>
+				<a href="">i7 7700K中文盒装CPU</a>
+				<p>¥2599.00</p>
+			</li>
+			<li>
+				<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0B/09/ChMkJ1lTXBCIa-WDAAVOO3BXYW0AAdp3QOrulcABU5T382.jpg" width="160" height="160"" alt=""></a>
+				<a href="">七彩虹 战斧主板</a>
+				<p>¥399.00</p>
+			</li>
+			<li>
+				<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0D/09/ChMkJlpMgKuIfFHLAAB2XxlgH_cAAjxBAJIWd0AAHZ3775.jpg" width="160" height="160"" alt=""></a>
+				<a href="">4G独显 DIY台式组装游戏主机</a>
+				<p>¥3999.00</p>
+			</li>
+			<li>
+				<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/01/0A/ChMkJlrpaNmIJJPUAABJGD2syqwAAoBFQHCyPUAAEkw339.jpg" width="160" height="160"" alt=""></a>
+				<a href="">漫步者轻便头戴耳机</a>
+				<p>¥149.00</p>
+			</li>
+		</div>
+	</div>
+ 	</div>
+ <!-- 家电优选 -->
+ <div class="jdyx W center">
+ 	<div class="jdyx-1">
+ 		<h3>家电优选</h3>
+ 	</div>
+ 	<div class="jdyx-2 W">
+ 		<div class="jdyx-3">
+ 			<a href=""><img class="img" width="594" height="398" src="./include/images/jdyx.jpg" alt=""></a>
+ 			<ul>
+ 				<li class="jdyx-xt"><a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0A/ChMkJ1rEMWeIM-CvAAAJAPAL8JMAAnVRgF9U78AAAkY401.jpg" alt="" width="120" height="60" ></a></li>
+ 				<li class="jdyx-xt"><a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0A/ChMkJ1rEMZGIccKEAAAGPaa-qUkAAnVRgLOLd4AAAZV657.jpg" alt="" width="120" height="60" ></a></li>
+ 				<li class="jdyx-xt"><a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0A/ChMkJ1rEMdKIfrYnAAAIyarug4YAAnVQwO-H8gAAAjh260.jpg" alt="" width="120" height="60"></a></li>
+ 				<li class="jdyx-xt"><a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0A/ChMkJ1rEMfGIetyiAAAJCt3hn6sAAnVRQI3EMQAAAki940.jpg" alt="" width="120" height="60"></a></li>
+ 				<div></div>
+ 				<li><a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0A/ChMkJ1rEMgmIL69dAAAGz_Umoe4AAnVRABIfTcAAAbn705.jpg" alt="" width="120" height="60"></a></li>
+ 				<li><a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0A/ChMkJ1rEMiGIG8muAAAIZsBe0BQAAnVRAI-42QAAAh-355.jpg" alt="" width="120" height="60"></a></li>
+ 				<li><a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0A/ChMkJ1rEMdKIfrYnAAAIyarug4YAAnVQwO-H8gAAAjh260.jpg" alt="" width="120" height="60"></a></li>
+ 				<li><a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0A/ChMkJ1rEMZGIccKEAAAGPaa-qUkAAnVRgLOLd4AAAZV657.jpg" alt="" width="120" height="60"></a></li>
+ 			</ul>
+ 		</div>
+ 		<div class="jdyx-4">
+ 			<div class="jdyx-4-1">
+ 				<ul>
+ 					<li><a href="">彩电</a></li>
+ 					<li><a href="">冰箱</a></li>
+ 					<li><a href="">洗衣机</a></li>
+ 					<li><a href="">厨卫</a></li>
+ 					<li><a href="">小家电</a></li>
+ 				</ul>
+ 			</div>
+ 			<ul>
+ 				<li>
+ 					<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0E/ChMkJ1rEfNeIBHfwAAD55rbKMzoAAnWIAFP_rAAAPn-538.jpg" alt="" width="160" height="160"></a>
+ 					<a class="asb" href="">创维  32X3  32英寸 窄边蓝光高清节能平板液晶电视机（黑色）</a>
+ 					<p>¥999.00</p>
+ 				</li>
+ 				<li>
+ 					<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0E/ChMkJ1rEi1qIWNMtAAHGQcdrWuIAAnWTAPX29AAAcZZ008.jpg" alt="" width="160" height="160"></a>
+ 					<a class="asb" href="">创维  50M9 50英寸 人工智能HDR 4K超高清 互联网液晶电视机</a>
+ 					<p>¥2499.00</p>
+ 				</li>
+ 				<li>
+ 					<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0D/0C/ChMkJlqroRKIHa9fAAHxneGavz8AAmxpAIzioUAAfG1194.jpg" alt="" width="160" height="160"></a>
+ 					<a class="asb" href="">创维  55V8E 55英寸 人工智能4色HDR 4K超高清智能网络液晶电视机</a>
+ 					<p>¥3299.00</p>
+ 				</li>
+ 				<div></div>
+ 				<li>
+ 					<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0E/ChMkJ1rEgwGIOvJXAAINLw3UuM8AAnWMgPbqAwAAg1H313.jpg" alt="" width="160" height="160"></a>
+ 					<a class="asb" href="">TCL电视 D32A810 32英寸高清 八核观影王 网络智能LED液晶电视</a>
+ 					<p>¥1399.00</p>
+ 				</li>
+ 				<li>
+ 					<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/06/0E/ChMkJlrEiciIDH6qAAJAATkl7sUAAnWRwPbrfgAAkAZ380.jpg" alt="" width="160" height="160"></a>
+ 					<a class="asb" href="">TCL电视 D43A810 43英寸全高清 八核观影王 网络智能LED液晶电视</a>
+ 					<p>¥1899.00</p>
+ 				</li>
+ 				<li>
+ 					<a href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0D/0C/ChMkJlqrl3GIS4A-AAFbCxVnpa4AAmxmAOG97gAAVsj714.jpg" alt="" width="160" height="160"></a>
+ 					<a class="asb" href="">TCL电视 49A810 49英寸全高清 八核观影 金属边框 智能LED液晶电视</a>
+ 					<p>¥2399.00</p>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+ </div>
+ <!-- 数码潮品 -->
+ 	<div class="smcp W center">
+ 		<div class="smcp-1">
+			<h3>数码潮品</h3>
+			<span>潮流、前端、黑科技</span>
+		</div>
+		<div class="smcp-2">
+			<div class="smcp-2-1">
+				<div class="smcp-3">
+					<h5>摄影/摄像</h5>				
+					<div><a href="">更多></a></div>
+				</div>
+				<div class="smcp-3-1">
+					<ul>
+						<li class="smcp-3-1-1">
+							<a class="whl" href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0B/09/ChMkJ1pFpX-IV9MXAACLJ0zIzjMAAjpAgBq-C8AAIs_329.jpg" width="160" height="160" alt=""></a>
+							<a class="wht" href="">佳能 EOS M6套机(15-45mm IS STM)</a>
+							<p>¥3650.00</p>
+						</li>
+						<li class="smcp-3-1-2">
+							<a class="whl" href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0B/09/ChMkJ1pFpX-IV9MXAACLJ0zIzjMAAjpAgBq-C8AAIs_329.jpg" width="160" height="160" alt=""></a>
+							<a class="wht" href="">佳能 EOS M6套机(15-45mm IS STM)</a>
+							<p>¥3650.00</p>
+						</li>
+						<li class="smcp-3-1-3">
+							<a class="whl" href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0B/09/ChMkJ1pFpX-IV9MXAACLJ0zIzjMAAjpAgBq-C8AAIs_329.jpg" width="160" height="160" alt=""></a>
+							<a class="wht" href="">佳能 EOS M6套机(15-45mm IS STM)</a>
+							<p>¥3650.00</p>
+						</li>
+						<div></div>
+						<li class="smcp-3-1-4">
+							<a class="whl" href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0B/09/ChMkJ1pFpX-IV9MXAACLJ0zIzjMAAjpAgBq-C8AAIs_329.jpg" width="160" height="160" alt=""></a>
+							<a class="wht" href="">佳能 EOS M6套机(15-45mm IS STM)</a>
+							<p>¥3650.00</p>
+						</li>
+						<li class="smcp-3-1-5">
+							<a class="whl" href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0B/09/ChMkJ1pFpX-IV9MXAACLJ0zIzjMAAjpAgBq-C8AAIs_329.jpg" width="160" height="160" alt=""></a>
+							<a class="wht" href="">佳能 EOS M6套机(15-45mm IS STM)</a>
+							<p>¥3650.00</p>
+						</li>
+						<li class="smcp-3-1-6">
+							<a class="whl" href=""><img src="https://mercrt-fd.zol-img.com.cn/g5/M00/0B/09/ChMkJ1pFpX-IV9MXAACLJ0zIzjMAAjpAgBq-C8AAIs_329.jpg" width="160" height="160" alt=""></a>
+							<a class="wht" href="">佳能 EOS M6套机(15-45mm IS STM)</a>
+							<p>¥3650.00</p>
+						</li>
+						<li>
+							<a href=""><img src="" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="" alt=""></a>
+						</li>
+						<li>
+							<a href=""><img src="" alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="smcp-2-2">
+				<div class="smcp-4">
+					<h5>笔记板/平板</h5>
+					<div><a href="">更多></a></div>
+				</div>
+			</div>
+		</div>
+ 	</div>
+ 	<!-- 尾部。。 -->
+	<div class="one_wb">
+		<div>
+			<div class="zhzc">
+				<dl>购物指南</dl>
+				<p><a href="">账号注册</a></p>
+				<p><a href="">购物流程</a></p>
+				<p><a href="">付款方式</a></p>
+			</div>
+			<div class="zhzc">
+				<dl>售后服务</dl>
+				<p><a href="">先行赔付</a></p>
+				<p><a href="">退款退货流程</a></p>
+				<p><a href="">投诉举报</a></p>
+			</div>
+			<div class="scbz">
+				<dl>商城保障</dl>
+				<p><a href="">正品保障</a></p>
+				<p><a href="">物流配送</a></p>
+				<p><a href="">24小时发货</a></p>
+				<p><a href="">发票保障</a></p>
+			</div>
+			<div class="scbz">
+				<dl>商家服务</dl>
+				<p><a href="">商家中心</a></p>
+			</div>
+			<dl class="jop">
+				<dt>400-688-1999</dt>
+				<dd>工作日 9:00 - 18:00</dd>
+			</dl>
+		</div>
+	</div>
+
+ 	<!-- 尾部 -->
+	<div class="tail">
+		<div class="tail_1 center">
+			<div class="tail_1_1">
+				<a href="">中关村在线</a>|
+				<a href="">Z商城</a>|
+				<a href="">团购</a>|
+				<a href="">产品报价</a>|
+				<a href="">论坛</a>|
+				<a href="">问答</a>
+			</div>
+			<div class="tail_1_2">
+				<a href="">关于Z商城</a>|
+				<a href="">帮助中心</a>|
+				<a href="">联系我们</a>
+			</div>
+			<div class="tail_1_3">
+				<span>
+					©2018 中关村在线 版权所有.
+					<a href="">京ICP证150096号</a>
+					京ICP备14061128号
+					<a href="">网络文化经营许可证京网文[2016]1631-199</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

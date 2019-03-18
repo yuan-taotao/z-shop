@@ -1,0 +1,416 @@
+/*样式初始化*/
+*{margin:0px;padding: 0px;font: 12px/1.5 Arial;color: #333;}
+html,body{width:100%;height:100%;max-width:5396px;color: #333;
+margin: 0;padding: 0;background-color: white;font: 12px/1.5 Arial;font-family: "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1" !important;
+}
+a{text-decoration: none;color:#000;}
+a:hover{color: red;}
+ul{list-style: none;}
+img{border:0px;}
+.W{width: 1200px;}
+.center{margin:0 auto;}  /*盒子居中*/
+/*顶部*/
+.tj{width: 100%;background-color:#f5f5f5;}
+.db{height: 29px;border-bottom: 1px solid #e6e6e6;
+}
+.db>div{float: left;}
+.db>div>span{display: inline-block;padding-right: 20px;color: #666;
+line-height: 20px;    font: 12px/29px arial;}
+.db>div>a{display: inline-block;height: 29px;line-height: 29px;}
+.dba{color: #36c;}
+.tsa{color: #666;}
+.dba:hover{text-decoration: underline solid red;}
+
+.db-1{width: 660px;height: 29px;margin-right: -10px;
+float: right;}
+.db-1>li{float: left;margin: 0 10px;}
+.db-1>li>a{color:#666 }
+.db-1>li>div{line-height: 29px;color:#666 }
+.db_1{height: 29px;line-height: 29px;}
+.db_1>a:hover{color: red;text-decoration: underline red solid;}
+/*logo*/
+.bag{height: 60px;margin-top: 30px;}
+.logo{width:130px;height: 60px;float: left;}
+.logo>a>img{height:100%;width:100%;}
+.f2{float: left;margin-top: 10px;margin-left: 110px;border: solid red 2px;
+}
+input[type='text']{width: 441px;height: 20px;padding: 6px 10px;padding-right: 10px;border:0 none;}
+input[type='submit']{width: 75px;height:36px;border: solid red 7px;background-color: red;}
+.quick{width:331px;height: 43px;float: left;margin-left: 78px;}
+.order{width:92px;height: 36px;line-height:36px; 
+	float: right;margin-top: 7px;margin-left:20px;}
+.coupon{width:107px;height: 36px;line-height:36px; 
+	float: right;margin-top: 7px;margin-left:20px;}
+.cart{width:72px;height: 36px;line-height:36px; 
+	float: right;margin-top: 7px;margin-left:20px;}
+.quick>div>a{font-size: 12px;}
+
+/*导航*/
+.dh{height: 39px;margin-top:20px;}
+.fl{width:160px;height:39px;background-color:red;border-bottom: 2px solid red;
+float: left;line-height: 39px;text-align: center;}
+.fl>a{color: white;font: 16px/38px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";}
+.hh{width:1020px;height:100%;border-bottom: 2px solid red;padding-right: 20px;
+float: left;}
+.sy{width:56px;height:100%;float: left;margin-left: 20px;
+line-height: 39px;text-align: center;}
+.tg{width:56px;height:100%;float: left;margin-left: 20px;
+line-height: 39px;text-align: center;}
+.dz,.bd,.jd{width:92px;height:100%;float: left;margin-left: 20px;
+line-height: 39px;text-align: center;}
+.hh>li>a{font: 18px/39px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";}
+.fl-1{width:160px;height: 400px;background-color: #454545;position: relative;
+display: none;}
+.fl-1>div{width:150px;height: 55px;margin-left:10px;line-height: 55px;}
+.fl-1>div>h3>a{color: white}
+.font{font: 16px/38px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";}
+.line{height: 55px;line-height: 55px;}
+.fl:hover>.fl-1{display: block;}
+/*.f1-1>div>div>ul>li>a{font: 16px/38px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";}*/
+/*滑过效果*/
+.fl-sj>div{width: 620px;height: 400px;
+position: absolute;top: 0px;left: 160px;display: none;}
+.fl-sj>div>ul{width: 620px;height: 110px;background-color: white;}
+.fl-sj>div>ul>li{width: 100px;height: 110px;float: left;}
+.fl-sj>div>ul>li>a{font-size: 16px;}
+.fl-sj>div>ul>li>a:hover{border-bottom:solid 1px red;}
+.fl-sj>div>div{width: 620px;height: 290px;}
+
+
+.fl-dn>div{width: 620px;height: 400px;
+position: absolute;top: 0px;left: 160px;display: none;}
+.fl-dn>div>ul{width: 620px;height: 110px;background-color: white;}
+.fl-dn>div>ul>li{width: 100px;height: 110px;float: left;}
+.fl-dn>div>ul>li>a{font-size: 20px;}
+.fl-dn>div>ul>li>a:hover{border-bottom:solid 1px red;}
+.fl-dn>div>div{width: 620px;height: 290px;}
+
+.fl-div>div{width: 620px;height: 400px;
+position: absolute;top: 0px;left: 160px;display: none;}
+.fl-div>div>ul{width: 620px;height: 110px;background-color: white;}
+.fl-div>div>ul>li{width: 100px;height: 110px;float: left;}
+.fl-div>div>ul>li>a{font-size: 20px;}
+.fl-div>div>ul>li>a:hover{border-bottom:solid 1px red;}
+.fl-div>div>div{width: 620px;height: 290px;}
+
+.fl-sm>div{width: 620px;height: 400px;display: none;
+position: absolute;top: 0px;left: 160px;}
+.fl-sm>div>ul{width: 620px;height: 110px;background-color: white;}
+.fl-sm>div>ul>li{width: 100px;height: 110px;float: left;}
+.fl-sm>div>ul>li>a{font-size: 20px;}
+.fl-sm>div>ul>li>a:hover{border-bottom:solid 1px red;}
+.fl-sm>div>div{width: 620px;height: 290px;}
+
+.fl-ws>div{width: 620px;height: 400px;
+position: absolute;top: 0px;left: 160px;display: none;}
+.fl-ws>div>ul{width: 620px;height: 110px;background-color: white;}
+.fl-ws>div>ul>li{width: 100px;height: 110px;float: left;}
+.fl-ws>div>ul>li>a{font-size: 20px;}
+.fl-ws>div>ul>li>a:hover{border-bottom:solid 1px red;}
+.fl-ws>div>div{width: 620px;height: 290px;}
+
+.fl-zn>div{width: 620px;height: 400px;
+position: absolute;top: 0px;left: 160px;display: none;}
+.fl-zn>div>ul{width: 620px;height: 110px;background-color: white;}
+.fl-zn>div>ul>li{width: 100px;height: 110px;float: left;}
+.fl-zn>div>ul>li>a{font-size: 20px;}
+.fl-zn>div>ul>li>a:hover{border-bottom:solid 1px red;}
+.fl-zn>div>div{width: 620px;height: 290px;}
+
+.fl-sj:hover>.fl-sj-1{display: block;}
+.fl-dn:hover>.fl-dn-1{display: block;}
+.fl-div:hover>.fl-div-1{display: block;}
+.fl-ws:hover>.fl-ws-1{display: block;}
+.fl-zn:hover>.fl-zn-1{display: block;}
+.fl-sm:hover>.fl-sm-1{display: block;}
+/*商品详情*/
+.sp{height: 912px;
+}
+.sn{width: 1208px;height: 32px;margin-left: -8px;
+}
+.sn>a{margin:0 8px;font: 12px/32px SimSun;
+}
+.sn>a:hover{text-decoration: underline solid red;
+}
+.sn>span{margin:0 8px;
+}
+.xq{width: 1198px;height: 562px;border: 1px solid #ededed;
+}
+.xq_1{width: 1000px;height: 562px;float: left;
+}
+.t{width:400px;height: 552px;padding-top: 10px;padding-left: 20px;float: left; 
+}
+.img_dt{width: 400px;height: 400px;margin-bottom:10px;
+}
+.img_xt{width: 410px;
+}
+.img_xt>a{width: 70px;height: 70px;margin-right:12px;float: left;
+}
+.right{width: 530px;height: 526px;padding:10px 20px 0 0;float:right;
+}
+.right>h3{width: 530px;height: 44px;padding-top:7px;margin-bottom: 10px;
+font: 16px/22px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.right>h3>span{display: block;color: #999;font-size: 14px;
+}
+/*价格*/
+.jg{width: 510px;height: 30px;padding:5px 10px;background: #f7f7f7;
+}
+.jg>dl{padding: 0 0 0 75px;position: relative;
+}
+.jg>dl>dt{position: absolute;top: 0;left: 0;width: 65px;color: #666;line-height: 30px;
+}
+.jg>dl>dd{width: 435px;height: 30px;overflow: hidden;line-height: 30px;
+font-size: 30px;font-weight: bold;color: red;
+}
+.ps_w{width: 530px;height: 395px;padding:10px 0 20px 0;
+}
+/*配送*/
+.ps{width: 510px;height: 25px;padding-top: 5px;margin:0 10px;position: relative;
+}
+.ps>dt{height: 32px;line-height: 32px;position: absolute;top:2px;left: 0;
+}
+.ps>dd{width: 445px;height: 25px;padding-left: 65px;
+}
+.sc{height: 25px;
+}
+.sc_1{width: 50px;height:23px;border: 1px solid #e6e6e6;line-height: 23px;
+text-align: center;float: left;
+}
+.sc_2{width: 96px;height: 23px;line-height: 23px;margin-left: 10px;float: left;
+}
+/*服务保障*/
+.fw{width: 510px;height: 61px;margin:0 10px;position: absolute;
+}
+.fw>dt{position: absolute;top: 0;left: 0;height: 32px;line-height: 32px;
+color: #666;
+}
+.fw-1{padding: 0 0 0 65px;line-height: 32px;width: 445px;height: 32px;line-height: 32px;
+}
+.fw-2{padding: 0 0 0 65px;line-height: 32px;
+}
+.fw-2>ul{width: 445px;height: 29px;
+}
+.fw-2>ul>li{width: 82px;height: 24px;padding-left: 28px;margin-bottom:5px;
+float: left;position: relative;
+}
+.fw-2>ul>li>a{height: 24px;line-height: 24px;
+}
+.i1,.i2,.i3{position: absolute;top: 0;left: 0;font-size: 14px;width:24px;height:24px;line-height: 24px;
+color: #00ae75;border:1px solid #00ae75;border-radius: 12px;text-align: center;
+}
+/*颜色类别*/
+.ys{width: 530px;height: 278px;margin: 71px 0 15px 0;border-top: 1px solid #f2f2f2;
+}
+.color{width: 530px;height: 41px;margin-top: 10px;position:relative;
+ }
+.color>dt{position: absolute;top: 0;left: 10px;height: 32px;line-height: 32px;margin-top: 2px;
+}
+.color>dd{padding: 0 0 0 65px;line-height: 32px;
+}
+.color>dd>li{float: left;margin: 5px 6px 0 10px;position: relative;list-style: none;
+}
+.color>dd>li>span{padding: 0 9px;height: 26px;line-height: 26px;border: 2px solid #c00;
+color: #333;text-decoration: none;cursor: pointer;width: 24px;
+}
+.color>dd>li>i{background: url(http://icon.zol-img.com.cn/newshop/shop/detail/youdian_v1/bg.png) no-repeat;
+position: absolute;right: 1px;bottom: 6px;width: 10px;height: 10px;background-position: 0 -346px;
+}
+/*套装*/
+.tz{width: 530px;height: 41px;margin-top: 10px;position:relative;
+ }
+.tz>dt{position: absolute;top: 0;left: 10px;height: 32px;line-height: 32px;margin-top: 2px;
+}
+.tz>dd{padding: 0 0 0 65px;line-height: 32px;height: 32px;
+}
+.tz>dd>li{margin: 5px 6px 0 10px;position: relative;list-style: none;width: 70px;
+}
+.tz>dd>li>span{padding: 0 9px;height: 26px;line-height: 26px;border: 2px solid #c00;
+color: #333;text-decoration: none;cursor: pointer;width: 48px;
+}
+.tz>dd>li>i{background: url(http://icon.zol-img.com.cn/newshop/shop/detail/youdian_v1/bg.png) no-repeat;
+position: absolute;right: 1px;bottom: 6px;width: 10px;height: 10px;background-position: 0 -346px;
+}
+.tz>dd>div{margin: 5px 0 0 10px;padding: 8px 10px;border: 1px solid #e6e6e6;background: #fafafa;
+height:20px;line-height: 20px;}
+.sl{padding: 20px 0 0;width: 530px;height: 32px;position: relative;margin-top: 50px;
+}
+.sl>dt{position: absolute;top: 0;left: 10px;height: 32px;line-height: 32px;margin-top: 20px;
+}
+.sl>dd{padding: 0 0 0 65px;width: 465px;height: 32px;line-height: 32px;
+}
+.zj{margin: 0 10px 0 0;width: 102px;height: 28px;border: 1px solid #e6e6e6;float: left;
+}
+.span1{width: 28px;height: 28px;background: url(http://icon.zol-img.com.cn/newshop/shop/detail/youdian_v1/bg.png) no-repeat;
+background-color: #f8f8f8;background-position: 0 -197px;display: block;float: left;
+}
+.zj>input{width: 44px;height: 28px;text-align: center;font: 12px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";border: 0 none;
+border-left: 1px solid #e6e6e6;border-right: 1px solid #e6e6e6;color: #333;padding:0 0;display: block;float: left;
+}
+.span2{width: 28px;height: 28px;background: url(http://icon.zol-img.com.cn/newshop/shop/detail/youdian_v1/bg.png) no-repeat;
+background-color: #f8f8f8;background-position: -32px -169px;display: block;float: left;
+}
+.span3{height: 32px;line-height: 32px;padding-right: 10px;display: block;float: left;
+}
+
+.lj{width: 465px;height: 50px;padding:30px 0 0 60px;
+}
+.lj>.a1{border-radius: 2px;font: 18px/50px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";text-align: center;display: block;float: left;
+margin: 0 10px 0 0;width: 140px;height: 50px;color: #fff;background: #c00;
+}
+.a2{width: 138px;height: 48px;border: 1px solid #ffd9d9;background-color: #ffeded;
+color: #c00;line-height: 48px;display: block;float: left;font: 18px/50px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";text-align: center;
+}
+/*右边*/
+.hc{width: 197px;height: 562px;border-left: 1px solid #ededed;float: right;
+}
+.hc-1{padding: 26px 10px;text-align: center;border-bottom: 1px solid #eee;
+}
+.zxkf{width: 167px;height: 156px;padding:0 15px;
+}
+.zxkf>div{width: 167px;height: 32px;line-height: 32px;font-size: 12px;color: #999;
+}
+.zxkf>li{width: 165px;height: 25px;padding:3px 0;list-style:none;
+}
+.qq{width: 25px;height: 25px;margin-right:6px;display: block;float: left;
+}
+.zxkf>li>span{width: 48px;height: 24px;line-height:24px;text-align: center;display: block;
+float: left;}
+/*客服电话*/
+.phone{width: 107px;height: 36px;padding:5px 0 5px 60px;position: relative;
+}
+.phone>span{width: 60px;height: 18px;display: block;line-height: 18px;position: absolute;
+top: 5;left: 0px;
+}
+
+/*店铺热卖*/
+.dprm{width: 1198px;height: 304px;border: 1px solid #ededed;margin-top: 10px;
+}
+.dprm>div{width: 1178px;height: 32px;line-height: 32px;padding:0 10px;
+border-bottom: 1px solid #ededed;background-color: #fafafa;font: 14px/32px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";    
+}
+.dprm>ul{width: 1181px;height: 271px;padding-left: 17px;
+}
+.dprm>ul>li{width: 150px;height: 229px;padding:20px 20px;float: left;
+}
+.spimg{width: 150px;height: 150px;display: block;
+}
+.dprm>ul>li>a>span{width: 150px;height: 32px;line-height:32px;padding-top: 13px;display: block;overflow: hidden;
+font: 12px/16px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+}
+.dprm>ul>li>a>span:hover{color: red;text-decoration:underline solid red;
+}
+.dprm>ul>li>div{padding: 4px 0 0;height: 30px;overflow: hidden;font: 16px Verdana;
+color: #f33;text-align: center;font-weight: bold;
+}
+/*商品介绍*/
+.spjs{width: 790px;
+}
+.spjs>ul{width: 788px;border:1px solid #ededed;background: #fafafa;height: 34px;
+}
+.li_2{padding: 0 15px;display: block;color: #333;font: 16px;border: 1px solid #ededed;border-bottom: 0 none;border-top: 0 none;
+ white-space: nowrap;height: 36px;color: red;line-height: 36px;float: left;
+}
+.li_1{margin: -1px 0 -1px -1px;padding: 0 0 2px;position: relative;height: 34px;
+background: #fff;border: 1px solid #ededed;border-top: 2px solid #c00;border-bottom: 0 none;
+height: 34px;float: left;}
+.spjs>ul>li>a{height: 34px;line-height: 34px;text-align: center;padding: 0 15px;display: block;
+font: 14px/34px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";color: #333;
+}
+
+.two{width: 790px;height: 22px;padding-bottom:4px;margin-bottom:8px;padding-top: 10px;
+}
+.two>span{font-weight: bold;
+}
+
+.three{width: 790px;height: 33px; 
+background: url(http://icon.zol-img.com.cn/newshop/shop/detail/youdian/sevice-title-new.png);
+}
+.three>span{padding: 0 0 0 10px;width: 160px;height:33px;line-height:33px;text-align: center;
+font: 20px/33px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";display: inline-block;
+}
+.three-1{color: #c00;
+}
+.three-2{color: white;
+}
+
+.four{width: 790px;height: 530px;
+}
+
+.five{width: 750px;
+}
+/*尾部。。*/
+
+.one_wb{width: 1349px;height: 180px;border:1px solid #ededed;margin-top: 20px;
+}
+.one_wb>div{width: 1200px;height: 140px;padding:20px 0;margin:0 auto;
+}
+.zhzc{width: 175px;height: 112px;float: left;
+}
+.zhzc>dl{font-weight: bold;width: 175px;height: 28px;line-height: 28px;font-size: 14px;
+}
+.zhzc>p{width: 175px;height: 28px;line-height: 28px;
+}
+.zhzc>p>a{color: #666;}
+.scbz{width: 175px;height: 112px;float: left;
+}
+.scbz>dl{font-weight: bold;width: 175px;height: 28px;line-height: 28px;font-size: 14px;
+}
+.scbz>p{width: 175px;height: 28px;line-height: 28px;
+}
+.scbz>p>a{color: #666;}
+
+.jop{width: 210px;height: 56px;padding-left: 60px;float: left;    background: url(http://icon.zol-img.com.cn/newshop/shop/index/footer.png) no-repeat;
+background-position: 0 -90px;
+}
+.jop>dt{width: 210px;height: 28px;line-height: 28px;font: bold 14px/28px "Microsoft YaHei","\5FAE\8F6F\96C5\9ED1";
+color: #666;}
+
+/*尾部*/
+.tail{
+    width: 100%;
+    height: 119px;
+    padding:25px 0 30px;
+    background: #2d2d2d;
+}
+.tail_1{
+    width:1200px;
+    height: 119px; 
+}
+.tail_1_1{
+    width: 1210px;
+    height: 24px;
+    margin-left: -10px;
+    padding-top: 7px;
+    color: #666;
+}
+.tail_1_1>a{
+    margin: 0 10px;
+    color: #fff;
+}
+.tail_1_2{
+    width: 1210px;
+    height: 24px;
+    padding-top: 20px;
+    margin-left: -10px;
+    color: #666;
+}
+.tail_1_2>a{
+    margin:0 10px;
+    color: #999;
+}
+.tail_1_3{
+    width: 1210px;
+    height: 24px;
+    padding-top: 20px;
+    margin-left: -10px;
+}
+.tail_1_3>span{
+    margin-left: -5px;
+    padding-left: 15px;
+    color: #666;
+}
+.tail_1_3>span>a{
+    margin:0 10px;
+    color: #666;
+}

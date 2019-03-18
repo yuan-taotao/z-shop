@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的订单</title>
+	<link rel="stylesheet" href="./include/css/wddd.css">
+</head>
+<body>
+<!-- 顶部 -->
+	<div class="db W center">
+		<div>
+			<span><a class="dba tsa" href="./index.php">商城首页</a></span>
+			<<?php
+					$a=isset($_SESSION['user']['islogin'])?"欢迎你,".$_SESSION['user']['username']:"登录";
+					$b=isset($_SESSION['user']['islogin'])?'退出':'免费注册';
+					$c=	isset($_SESSION['user']['islogin'])?'./index.php?m=per&a=show':'./index.php?m=sign&a=show';
+					$d=	isset($_SESSION['user']['islogin'])?'./index.php?m=signout&a=signout':'./index.php?m=reg&a=show';
+					echo '<span>Hi~欢迎来到Z商城，请<a class="dba" href="'.$c.'">'.$a.'</a></span>';
+					echo '<a class="dba" href="'.$d.'">'.$b.'</a>';
+?>
+			<!-- <span>Hi~欢迎来到Z商城，请<a class="dba" href="">登录</a></span>
+			<a class="dba" href="">免费注册</a> -->
+		</div>
+		<ul class="db-1">
+			<li class="db_1"><a href="">我的订单</a></li>
+			<li><div>买家中心∨</div></li>
+			<li class="db_1"><a href="">购物车0件</a></li>
+			<li class="db_1"><a href="">帮助中心</a></li>
+			<li><div>|</div></li>
+			<li><div>手机商城∨</div></li>
+			<li class="db_1"><a href="">中关村在线</a></li>
+			<li class="db_1"><a href="">招商合作</a></li>
+			<li><div>联系客服∨</div></li>
+		</ul>
+	</div>
+	<!--logo-->
+	<div class="header center">
+		<div class="header_1 center">
+			<a class="logo" href="http://my.zol.com/"></a>
+			<a class="index" href="http://my.zol.com">首页</a>
+			<a class="message" href="">
+				消息<i class="no-read-message">0</i>
+			</a>
+			<form class="form" action="" method="">
+				<input class="form_1" type="text" placeholder="搜索商品/店铺">
+				<input class="form_2" type="submit" value="搜索">
+			</form>
+		</div>
+	</div>
+	<!-- 中部 -->
+	<div class="contoin center W">
+	<!-- 第一个盒子 -->
+		<ul class="public">
+			<li class="public_1">
+				<a href="">
+				<i class="order"></i>
+					订单中心
+				</a>
+			</li>
+			<li><a class="bt xt" href="">我的订单</a></li>
+			<li><a class="xt" href="">团购订单</a></li>
+			<li><a class="xt" href="">评价晒单</a></li>
+			<li><a class="xt" href="">我购买的配置单</a></li>
+			<li class="public_2">
+				<a href="">
+				<i class="order_1"></i>
+				我的关注
+				</a>
+			</li>
+			<li><a class="xt" href="">关注的商家</a></li>
+			<li><a class="xt" href="">关注的商品</a></li>
+			<li class="public_3">
+				<a href="">
+				<i class="order_2"></i>
+					我的优惠
+				</a>
+			</li>
+			<li><a class="xt" href="">团购优惠卷</a></li>
+			<li><a class="xt" href="">我的红包</a></li>
+			<li><a class="xt" href="">店铺优惠卷</a></li>
+			<li><a class="xt" href="">我的会员卡</a></li>
+			<li class="public_4">
+				<a href="">
+				<i class="order_3"></i>
+					消息中心
+				</a>
+			</li>
+			<li><a class="xt" href="">我的信息</a></li>
+			<li class="public_5">
+				<a href="">
+				<i class="order_4"></i>
+					个人设置
+				</a>
+			</li>
+			<li><a class="xt" href="">收货地址管理</a></li>
+			<li><a class="xt" href="">ZOL个人中心</a></li>
+			<li class="public_6">
+				<a href="">
+				<i class="order_5"></i>
+					售后服务
+				</a>
+			</li>
+			<li><a class="xt" href="">投诉维权</a></li>
+			<li><a class="xt" href="">退款/售后</a></li>
+			<li class="public_7">
+				<a href="">
+				<i class="order_6"></i>
+					特色频道
+				</a>
+			</li>
+			<li><a class="xt" href="">团购</a></li>
+			<li><a class="xt" href="">电子竞技</a></li>
+			<li><a class="xt" href="">手机馆</a></li>
+			<li><a class="xt" href="">Z商城服务说明</a></li>
+		</ul>
+		<!-- 第二个盒子 -->
+		<div class="content">
+			<div class="content_1">
+				<ul class="content_1_1">
+					<li class="li_1">
+						<a href="">商城订单</a>
+					</li>
+					<li class="li_2">
+						<a href="">经销商订单</a>
+					</li>
+				</ul>
+				<!-- 待付款 -->
+				<ul class="content_1_2">
+				<li>
+					<a href="">
+						<span>待付款<em>0</em></span>
+						<i class="icon1"></i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>待发货<em>0</em></span>
+						<i class="icon2"></i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>待收货<em>0</em></span>
+						<i class="icon3"></i>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>待评价<em>0</em></span>
+						<i class="icon4"></i>
+					</a>
+				</li>
+				</ul>
+				<table class="order-title order-table">
+                    <tbody>
+                        <tr>
+                        	<td class="cell3">订单号</td>
+                            <td class="cell1">商品信息</td>
+                            <td class="cell2">单价（元）</td>
+                            <td class="cell3">数量</td>
+                            <td class="cell5">实付款（元）</td>
+                            <td class="cell6 status">全部状态 </td>
+                            <td class="cell7">操作</td>
+                        </tr>
+                    </tbody>
+               </table>
+               <p class="pp">您还没有订单</p>
+               <div class="page">
+               </div>
+			</div>
+			<!-- 猜你喜欢 -->
+			<div class="like">
+				<div class="like_1"><h4>猜你喜欢</h4></div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部 -->
+	<div class="tail">
+		<div class="tail_1 center">
+			<div class="tail_1_1">
+				<a href="">中关村在线</a>|
+				<a href="">Z商城</a>|
+				<a href="">团购</a>|
+				<a href="">产品报价</a>|
+				<a href="">论坛</a>|
+				<a href="">问答</a>
+			</div>
+			<div class="tail_1_2">
+				<a href="">关于Z商城</a>|
+				<a href="">帮助中心</a>|
+				<a href="">联系我们</a>
+			</div>
+			<div class="tail_1_3">
+				<span>
+					©2018 中关村在线 版权所有.
+					<a href="">京ICP证150096号</a>
+					京ICP备14061128号
+					<a href="">网络文化经营许可证京网文[2016]1631-199</a>
+				</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

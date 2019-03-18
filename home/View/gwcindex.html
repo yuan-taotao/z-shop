@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" href="./include/css/gwc.css">
+</head>
+<body>
+<!-- 顶部 -->
+	<div class="db W center">
+		<div>
+			<span><a class="dba tsa" href="./index.php">商城首页</a></span>
+			<?php
+					$a=isset($_SESSION['user']['islogin'])?"欢迎你,".$_SESSION['user']['username']:"登录";
+					$b=isset($_SESSION['user']['islogin'])?'退出':'免费注册';
+					$c=	isset($_SESSION['user']['islogin'])?'./index.php?m=订单控制&a=显示订单页面':'./index.php?m=sign&a=show';
+					$d=	isset($_SESSION['user']['islogin'])?'./index.php?m=signout&a=signout':'./index.php?m=reg&a=show';
+					echo '<span>Hi~欢迎来到Z商城，请<a class="dba" href="'.$c.'">'.$a.'</a></span>';
+					echo '<a class="dba" href="'.$d.'">'.$b.'</a>';
+?>
+			<!-- <span>Hi~欢迎来到Z商城，请<a class="dba" href="">登录</a></span>
+			<a class="dba" href="">免费注册</a> -->
+		</div>
+		<ul class="db-1">
+			<li class="db_1"><a href="">我的订单</a></li>
+			<li><div>买家中心∨</div></li>
+			<li class="db_1"><a href="">购物车0件</a></li>
+			<li class="db_1"><a href="">帮助中心</a></li>
+			<li><div>|</div></li>
+			<li><div>手机商城∨</div></li>
+			<li class="db_1"><a href="">中关村在线</a></li>
+			<li class="db_1"><a href="">招商合作</a></li>
+			<li><div>联系客服∨</div></li>
+		</ul>
+	</div>
+<!-- logo -->
+	<div class="bag center W">
+		<div class="logo">
+			<a href="http://www.ZOL.com"><img src="./include/images/logo.jpg" ></a>
+		</div>
+        <ul class="flow">
+            <li class="s1">加入购物车</li>
+            <li class="s2">下订单</li>
+            <li class="s3">去付款</li>
+            <li class="s4">确认收货</li>
+            <li class="s5">评价</li>
+        </ul>
+	</div>
+<!-- 购物车商品 -->
+<div class="gwc W center">
+	<dl>
+		<dt>您的购物车里还没有商品，您可以：</dt>
+		<dd>去<a href="./index.php">挑选商品</a></dd>
+	</dl>
+</div>
+<!-- 猜你喜欢 -->
+	<ul class="like W center">
+		<li>猜你喜欢</li>
+	</ul>
+	<div class="like-1 center">
+		<ul></ul>
+	</div>
+<!-- 尾部 -->
+	<div class="wb W center">
+		<p>
+			<a href="">关于商城</a>|
+			<a href="">营销中心</a>|
+			<a href="">服务中心</a>|
+			<a href="">联系我们</a>|
+			<a href="">发展历程</a>|
+			<a href="">媒体报道</a>
+		</p>
+		<p>
+			<span>©2018中关村在线 版权所有. 京ICP备09041801号-182
+				<a href="">京ICP证010391号</a>
+			</span>
+		</p>
+	
+		<div class="W center zh">
+			<a href="">
+				<img src="./include/images/beian.png" alt="">
+				<img src="./include/images/jingcha.png" alt="">
+				<img src="./include/images/cert.png" alt="">
+			</a>
+		</div>
+	</div>
+</body>
+</html>
